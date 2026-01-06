@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*
+Table of Contents:
+- Black Banner
+- Pixelated Effect
+- Subject Placement
+- Subject Cards
+- Logo
+*/
+html, body {
+    background: white;
+    margin: 0;
+    padding: 0;
+}
+
+/*Black Banner: Affects the black banner at the top*/
+.header {
+    position: relative;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: linear-gradient(
+        180deg,
+        black,
+        black
+    );
+
+    color: #f5f5f5;
+    text-align: center;
+    padding: 3rem 1.5rem;
+
+    overflow: hidden;
+}
+
+.header > * {
+    position: relative;
+    z-index: 2;
+}
+
+/*Pixelated Effect*/
+.header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 70px;
+
+    background-image: url("./images/pixels.png");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: auto 70px;
+
+    opacity: 0.55;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/*Subject Placement: Puts subjects in their correct place*/
+.subjects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+/*Subject Cards: Subject button cards*/
+.card {
+    padding: 1.5rem;
+    border: 4px solid black;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.card:hover {
+    border-color: navy;
+    background: lightblue;
+}
+
+/*Logo: Logo in the top left*/
+.logo {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    height: 150px;
+    width: auto;
+    transform: rotate(-8deg);
+    z-index: 10;
+    
+}
+
+.middle-rectangle {
+    width: min(900px, 90%);
+    margin: 40px auto;         
+    padding: 50px;
+
+    background: #d9d9d9;
+    border-radius: 16px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+
+    min-height: 800px;          
+}
