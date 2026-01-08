@@ -43,8 +43,8 @@ html, body {
 /*Header link tabs */
 .header-link {
     color: white;
-    
 }
+
 /*Pixelated Effect*/
 .header::after {
     content: "";
