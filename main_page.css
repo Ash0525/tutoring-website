@@ -40,6 +40,11 @@ html, body {
     z-index: 2;
 }
 
+/*Header link tabs */
+.header-link {
+    color: white;
+    
+}
 /*Pixelated Effect*/
 .header::after {
     content: "";
