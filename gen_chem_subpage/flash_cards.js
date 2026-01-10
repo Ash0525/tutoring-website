@@ -16,13 +16,19 @@ const flashCardsFront = [
     "B2H6", 
     "CH4", 
     "SiH4", 
-    "NH3"
+    "NH3",
+    "PH3",
+    "H2O",
+    "H2S"
 ];
 const flashCardsBack = [
   "Diborane",
   "Methane",
   "Silane",
   "Ammonia",
+  "Phosphine",
+  "Water",
+  "Hydrogen Sulfide"
 ];
 
 // important functions
