@@ -1,0 +1,75 @@
+.header {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.flashcard-container {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.flashcard-button {
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: hsl(216, 88%, 60%);
+    cursor: pointer;
+}
+
+.flashcard-button:hover {
+    background-color: hsl(216, 88%, 50%);
+}
+
+.flashcard-button:active {
+    background-color: hsl(216, 88%, 40%);
+}
+
+/* css used for stacking front and back */
+.flashcard {
+    position:relative;
+    background-color: hsl(0, 0%, 72%);
+    width:430px;
+    height: 200px;
+    padding: 30px;
+    border: 3px solid hsl(0, 0%, 20%);
+    border-radius: 5px;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+/* controls both front and back flashcards */
+#front-flashcard, #back-flashcard {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: hsl(0, 0%, 99%);
+}
+
+/* just the front */
+#front-flashcard{
+    z-index: 2;
+    background-color: hsl(195, 67%, 57%);
+}
+
+/* just the back */
+#back-flashcard{
+    z-index: 1;
+    background-color: rgb(14, 36, 238);
+}
+
+
+/* when flipped, swap z-indeces */
+.flashcard.flipped #front-flashcard {
+    z-index: 1;
+}
+
+.flashcard.flipped #back-flashcard {
+    z-index: 2;
+}

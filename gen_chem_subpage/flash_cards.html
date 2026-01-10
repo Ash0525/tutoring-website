@@ -7,9 +7,26 @@
     <link rel="stylesheet" href="flash_cards.css">
 </head>
 <body>
-    <h1 class="header">General Chemistry Flash Cards</h1>
-    <div class="flashcard-container">
+    <header>
+        <h1 class="header">General Chemistry Flash Cards</h1>
+        <h4 class="header">Molecular Compounds</h4>
+    </header>
+    <section class="flashcard-container">
+        
+        <!-- the card is the outer div-->
+         <div class="flashcard">
+            <div id="front-flashcard">Front</div>
+            <div id="back-flashcard">Back</div>
+         </div>
 
-    </div>
+        <!-- We need to define those functions -->
+        <button id="prev-button" class="flashcard-button" onclick="goToPrev()">Previous</button>
+        <button id="next-button" class="flashcard-button" onclick="goToNext()">Next</button>
+        <button id="reset-button" class="flashcard-button" onclick="resetFlashcards()">reset</button>
+        
+    </section>
+    
+    
+    <script src="flash_cards.js"></script>
 </body>
 </html>
