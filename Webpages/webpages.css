@@ -3,10 +3,12 @@ body {
     padding: 40px;
     font-family: serif;
 }
+
 .header {
     display: flex;
     justify-content: center;
 }
+
 .main-rectangle {
     width: min(900px, 90%);
     margin: 40px auto;         
@@ -34,6 +36,16 @@ body {
     background: hsl(212, 76%, 72%);
     box-shadow: 10px 10px 0px hsl(226, 86%, 25%);
     overflow: hidden;
+}
+
+/* Show dropdown content only when chapter is OPEN */
+.chapter.open .chapter-content {
+    display: block;
+}
+
+/* When chapter is open rotate the arrow */
+.chapter.open .arrow {
+    transform: rotate(180deg);
 }
 
 .chapter-btn {
