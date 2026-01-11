@@ -1,41 +1,70 @@
-.dropdown{
-    display: inline-block;
+body {
+    margin: 0;
+    padding: 40px;
+    font-family: serif;
+}
+.header {
+    display: flex;
+    justify-content: center;
+}
+.main-rectangle {
+    width: min(900px, 90%);
+    margin: 40px auto;         
+    top: 0;
+    padding-top: 2.5rem;
+
+    background: hsl(0, 8%, 88%);
+    border-radius: 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 25px;
+
+    min-height: 800px; 
 }
 
-/*  */
+.chapter {
+    width: min(900px, 90%);
+    margin: 30px auto;
+    border: 2px solid hsl(0, 0%, 0%);
+    border-radius: 30px;
+    background: hsl(212, 76%, 72%);
+    box-shadow: 10px 10px 0px hsl(226, 86%, 25%);
+    overflow: hidden;
+}
 
-.dropdown button{
-    background-color: blue;
-    color: white;
-    padding: 10px 15px;
-    border: 5px solid black;
+.chapter-btn {
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 30px 35px;
     cursor: pointer;
-
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px;
 }
 
-.dropdown a {
-    display: block;
-    color: black;
-    text-decoration: none;
-    padding: 10px 15px;
+.arrow {
+    font-size: 26px;
+    line-height: 1;
 }
 
-.dropdown .content {
+.chapter-content {
     display: none;
-    position:absolute;
-    background-color: white;
-    min-width: 100px;
-    box-shadow: 2px 2px 5px black;
+    padding: 0 35px 30px 35px;
 }
 
-.dropdown:hover .content {
-    display:block;
+.chapter-content a {
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+    color: hsl(0, 0%, 0%);
 }
 
-.dropdown:hover button {
-    background-color: hsl(0, 0%, 70%);
-}
-
-.dropdown a:hover{
-    background-color: hsl(0, 0%, 90%);
+.chapter-content a:hover {
+    text-decoration: underline;
 }
