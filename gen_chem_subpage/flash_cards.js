@@ -18,8 +18,7 @@ const flashCardsFront = [
     "SiH4", 
     "NH3",
     "PH3",
-    "H2O",
-    "H2S"
+    "H2O"
 ];
 const flashCardsBack = [
   "Diborane",
