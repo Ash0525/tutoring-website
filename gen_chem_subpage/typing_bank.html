@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing bank</title>
+    <link rel="stylesheet" href="webpages.css">
+</head>
+<body>
+    <h1 class="header">Type the correct answer</h1>
+    <!-- Big div container -->
+    <div id="main-root">
+        <!-- Section 1: controls area, choose sets -->
+        <section>
+            <button 
+                class="set-selector" 
+                aria-expanded="false" 
+                aria-controls="set-list"
+                type="button">
+                <span>Sets</span>
+                <span class="arrow">▾</span>
+
+            </button>
+
+            <!-- Choose a set to study from -->
+            <div class="chapter-content">
+                <!-- Note that 'set-option' will change based on what json we are getting out of -->
+                <button type="button" class="set-option">Set 1</button>
+                <button type="button" class="set-option">Set 2</button>
+                <button type="button" class="set-option">Set 3</button>
+            </div>
+
+            <!-- Mode selector -->
+             <div class="mode-selector">
+                <!-- Option for formula to name -->
+                <label>
+                    <input type="radio" name="mode" value="formula_to_name" checked>
+                    Formula -> Name
+                </label>
+
+                <!-- Option for name to formula -->
+                <label>
+                    <input type="radio" name="mode" value="name_to_formula" checked>
+                    Name -> Formula
+                </label>   
+             </div>
+        </section>
+
+        <!-- Section 2: User interactions -->
+        <section>
+
+            <!-- Display question -->
+            <div id="question-display">
+                <!-- FIXME: where JS goes-->
+            </div>
+
+            <!-- Submit answer -->
+            <form id="answer-form">
+
+                <!-- User input -->
+                <input
+                    type="text"
+                    id="answer-input"
+                    autocomplete="off"
+                    spellcheck="false"
+                    placeholder="Type your answer here"
+                >
+
+                <button type="submit" id="submit-answer">
+                    Submit
+                </button>
+            </form>
+
+            <!-- Response: did you get it right or wrong? -->
+            <div>
+                <!-- FIXME: JS for correct/incorrec feedback here -->
+            </div>
+
+            <!-- Previous and Next buttons -->
+            <div class="navigation-controls">
+                <button type="button" id="prev-question">Previous</button>
+                <button type="button" id="prev-question">Previous</button>
+            </div>
+
+        </section>
+
+        <!-- Section 3: Progress status -->
+        <section>
+            <!-- Empty for now, but for expansion -->
+        </section>
+
+    </div>
+    <script src="/gen_chem_subpage/typing_bank.js" defer></script>
+</body>
+</html>
