@@ -1,3 +1,4 @@
+console.log("typing_log.js loaded")
 // ==============================
 // STATE
 // ==============================
@@ -51,25 +52,27 @@ document.addEventListener("DOMContentLoaded", () => {
     // 3.2 
     // Runs once when page loads
     async function init(){
+        console.log("init() started")
         try {
             indexData = await loadIndex();
+            const firstSet = indexData.sets[0];
 
             const setRes = await fetch(`sets_bank/${firstSet.file}`);
             if (!setRes.ok) {
                 throw new Error(`Failed to load set file (${setRes.status})`);
 
             }
-            activateSetData = await setRes.json();
+            activeSetData = await setRes.json();
 
             console.log("Active set data:", activeSetData);
-            
+
         } catch (err) {
             questionDisplay.textContent = "Failed to load study sets.";
             console.error(err)
             return;
         }
     }
-
+    init();
 });
 
 // ==============================
