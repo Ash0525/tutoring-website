@@ -1,0 +1,18 @@
+{
+    "sets": [
+        {
+            "id": "polyatomic_ions",
+            "title": "Polyatomic Ions",
+            "file": "polyatomic_ions.json",
+            "category": "Ions",
+            "tags": ["gen_chem", "memorization"]
+        },
+        {
+            "id": "acids",
+            "title": "Acids",
+            "file": "acids.json",
+            "category:": "Acids",
+            "tags": ["gen_chem", "naming"]
+        }
+    ]
+}

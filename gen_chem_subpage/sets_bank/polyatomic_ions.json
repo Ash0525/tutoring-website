@@ -1,0 +1,51 @@
+{
+  "id": "polyatomic_ions",
+  "title": "Polyatomic Ions",
+  "description": "Common polyatomic ions for General Chemistry memorization.",
+  
+  "answer_policy": {
+    "case_sensitive": false,
+    "trim_whitespace": true,
+    "collapse_spaces": true,
+    "normalize_charge": true
+  },
+
+  "pairs": [
+    {
+        "formula": "NO3^-",
+        "names": ["nitrate"]
+    },
+    {
+        "formula": "NO2^-",
+        "names": ["nitrite"]
+    },
+    {
+        "formula": "N3^-",
+        "names": ["nitride"]
+    },
+    {
+        "formula": "SO4^2-",
+        "names": ["sulfate"]
+    },
+    {
+        "formula": "SO3^2-",
+        "names": ["sulfite"]
+    },
+        {
+        "formula": "S^2-",
+        "names": ["sulfide"]
+    },
+        {
+        "formula": "PO4^3-",
+        "names": ["phosphate"]
+    },
+        {
+        "formula": "PO3^3-",
+        "names": ["phosphite"]
+    },
+        {
+        "formula": "P^3-",
+        "names": ["phosphide"]
+    }
+  ]
+}
