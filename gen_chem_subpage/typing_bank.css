@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: serif;
+}
+
+.nav-buttons {
+    display: flex;
+    flex-direction: row;
+    background: pink;
+    justify-content: center;
+    cursor: pointer;
+    padding: 20px 20px;
+}
+
+.navigation-controls {
+    display: flex;
+    justify-content: center;
+
+}
+
+#answer-form {
+    display: flex;
+    justify-content: center;
+}
+
+#feedback-display {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+
+}
+
+#question-display {
+    width: min(900px, 50%);
+    margin: 30px auto;
+    padding: 30px;
+    border: 2px solid hsl(0, 0%, 0%);
+    border-radius: 30px;
+    background: hsl(212, 76%, 72%);
+    box-shadow: 10px 10px 0px hsl(226, 86%, 25%);
+    overflow: hidden;
+}
+
+

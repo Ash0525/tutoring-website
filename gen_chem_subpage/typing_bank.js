@@ -66,12 +66,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 setSelector.appendChild(option);
             }
 
-            setSelector.value = indexData.sets[0].file;
-
             const defaultFile = indexData.sets[0].file;
             setSelector.value = defaultFile;
-
-
             await loadSetByFile(defaultFile);
 
             // get first set (from a chosen set)
@@ -174,7 +170,10 @@ document.addEventListener("DOMContentLoaded", () => {
         activeSetData = await res.json();
         cursor = 0;
 
-        feedbackDisplay.textContent = "";
+        if (typeof feedbackDisplay !== "undefined" && feedbackDisplay) {
+            feedbackDisplay.textContent = "";
+        }
+
         renderQuestion();
     }
 
