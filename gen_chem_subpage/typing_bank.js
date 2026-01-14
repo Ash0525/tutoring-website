@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return await res.json();
     }
     
-    // 3.1.2 INitialization function
+    // 3.1.2 Initialization function
     async function init(){
         console.log("init() started")
         try {
@@ -116,9 +116,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // call for next question
             renderQuestion();
+
         } else {
             console.log("User got it wrong, they have to attempt again.")
         }
+    }
+
+    function nextButton() {
+        // guard
+        if (!activeSetData) return;
+        
+        // next button logic
+        cursor = (cursor + 1) % activeSetData.pairs.length;
+
+        // call question
+        renderQuestion();
+    }
+
+    function prevButton() {
+        // guard
+        if (!activeSetData) return;
+
+        // prev button logic
+        cursor = (cursor - 1) % activeSetData.pairs.length;
+
+        // call question
+        renderQuestion();
     }
 
     // ==============================
@@ -129,6 +152,14 @@ document.addEventListener("DOMContentLoaded", () => {
     answerForm.addEventListener("submit", (e) => {
         e.preventDefault();
         checkAnswer();
+    })
+
+    nextQuestion.addEventListener("click", () => {
+        nextButton();
+    })
+    
+    prevQuestion.addEventListener("click", () => {
+        prevButton();
     })
 
     init();

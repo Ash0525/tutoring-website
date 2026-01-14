@@ -46,6 +46,111 @@
         {
         "formula": "P^3-",
         "names": ["phosphide"]
+    },
+        {
+        "formula": "Cl^-",
+        "names": ["chloride"]
+    },
+        {
+        "formula": "ClO^-",
+        "names": ["hypochlorite"]
+    },
+        {
+        "formula": "ClO2^-",
+        "names": ["chlorite"]
+    },
+        {
+        "formula": "ClO3^-",
+        "names": ["chlorate"]
+    },
+        {
+        "formula": "ClO4^-",
+        "names": ["perchlorate"]
+    },
+        {
+        "formula": "Br^-",
+        "names": ["bromide"]
+    },
+        {
+        "formula": "BrO^-",
+        "names": ["hypobromite"]
+    },
+        {
+        "formula": "BrO2^-",
+        "names": ["bromite"]
+    },
+        {
+        "formula": "BrO3^-",
+        "names": ["bromate"]
+    },
+        {
+        "formula": "BrO4^-",
+        "names": ["perbromate"]
+    },
+        {
+        "formula": "I^-",
+        "names": ["iodide"]
+    },
+        {
+        "formula": "IO^-",
+        "names": ["hypoiodite"]
+    },
+        {
+        "formula": "IO2^-",
+        "names": ["iodite"]
+    },
+        {
+        "formula": "IO3^-",
+        "names": ["iodate"]
+    },
+        {
+        "formula": "IO4^-",
+        "names": ["periodate"]
+    },
+        {
+        "formula": "CO3^2-",
+        "names": ["carbonate"]
+    },
+        {
+        "formula": "IO4^-",
+        "names": ["hydrogen carbonate", "bicarbonate"]
+    },
+        {
+        "formula": "IO4^-",
+        "names": ["sulfide"]
+    },
+        {
+        "formula": "IO4^-",
+        "names": ["sulfate"]
+    },
+        {
+        "formula": "IO4^-",
+        "names": ["hydrogen sulfate", "bisulfate"]
+    },
+        {
+        "formula": "IO4^-",
+        "names": ["phosphate"]
+    },
+        {
+        "formula": "IO4^-",
+        "names": ["hdrogen phosphate"]
+    },
+        {
+        "formula": "IO4^-",
+        "names": ["dihydrogen phosphate"]
+    },
+        {
+        "formula": "IO4^-",
+        "names": ["phosphite"]
+    },
+        {
+        "formula": "IO4^-",
+        "names": ["hydrogen phosphite"]
+    },
+        {
+        "formula": "IO4^-",
+        "names": ["dihydrogen phosphite"]
     }
+    
   ]
 }
