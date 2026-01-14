@@ -1,12 +1,81 @@
 body {
     margin: 0;
-    padding: 40px;
-    font-family: serif;
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+    background:
+        /* soft top glow */
+        radial-gradient(
+        1200px 700px at 50% 0%,
+        rgba(255,255,255,0.10),
+        transparent 60%
+        ),
+
+        /* blue nebula left */
+        radial-gradient(
+        900px 700px at 15% 30%,
+        rgba(110,168,254,0.30),
+        transparent 65%
+        ),
+
+        /* purple-blue haze right */
+        radial-gradient(
+        900px 700px at 85% 35%,
+        rgba(140,120,255,0.22),
+        transparent 65%
+        ),
+
+        /* green-blue depth */
+        radial-gradient(
+        900px 800px at 75% 80%,
+        rgba(57,217,138,0.14),
+        transparent 70%
+        ),
+
+        /* dark vignette edges */
+        radial-gradient(
+        1200px 900px at 50% 50%,
+        transparent 40%,
+        rgba(0,0,0,0.55) 100%
+        ),
+
+        /* deep base */
+        linear-gradient(
+        180deg,
+        #070b16 0%,
+        #0b1220 45%,
+        #0f1b33 100%
+        );
+
+    background-attachment: fixed;
 }
 
 .header {
     display: flex;
     justify-content: center;
+    color: hsl(0, 0%, 100%);
+}
+
+.header-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 40px auto;
+    border-radius: 15px;
+    width:85%;
+    border: 1px solid hsla(0, 0%, 100%, 0.25);
+    box-shadow: 10px 10px 10px hsl(227, 95%, 7%);
+    color:hsl(0, 0%, 100%)
+
+    background:
+        radial-gradient(1200px 500px at 50% 0%, hsla(0, 0%, 100%, 0.10), transparent 60%),
+        radial-gradient(900px 600px at 15% 35%, hsla(217, 90%, 70%, 0.28), transparent 65%),
+        radial-gradient(900px 600px at 85% 35%, hsla(255, 80%, 65%, 0.22), transparent 65%),
+        radial-gradient(1000px 700px at 50% 80%, hsla(220, 50%, 5%, 0.55), transparent 70%),
+        linear-gradient(180deg, hsl(220, 45%, 7%) 0%, hsl(222, 40%, 11%) 45%, hsl(223, 42%, 16%) 100%);
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.10);
 }
 
 .main-rectangle {
@@ -14,8 +83,12 @@ body {
     margin: 40px auto;         
     top: 0;
     padding-top: 2.5rem;
-
-    background: hsl(0, 8%, 88%);
+    background:
+        radial-gradient(1200px 500px at 50% 0%, hsla(0, 0%, 100%, 0.10), transparent 60%),
+        radial-gradient(900px 600px at 15% 35%, hsla(217, 90%, 70%, 0.28), transparent 65%),
+        radial-gradient(900px 600px at 85% 35%, hsla(255, 80%, 65%, 0.22), transparent 65%),
+        radial-gradient(1000px 700px at 50% 80%, hsla(220, 50%, 5%, 0.55), transparent 70%),
+        linear-gradient(180deg, hsl(220, 45%, 7%) 0%, hsl(222, 40%, 11%) 45%, hsl(223, 42%, 16%) 100%);
     border-radius: 16px;
 
     display: flex;
@@ -31,10 +104,11 @@ body {
 .chapter {
     width: min(900px, 90%);
     margin: 30px auto;
-    border: 2px solid hsl(0, 0%, 0%);
+    border: 2px solid hsl(0, 0%, 100%);
     border-radius: 30px;
-    background: hsl(212, 76%, 72%);
-    box-shadow: 10px 10px 0px hsl(226, 86%, 25%);
+    background: linear-gradient(45deg, hsl(221, 79%, 37%) 0%, hsl(221, 55%, 31%) 45%, hsl(225, 49%, 28%) 100%);
+
+    box-shadow: 10px 10px 15px hsl(226, 98%, 16%);
     overflow: hidden;
 }
 
@@ -49,6 +123,7 @@ body {
 }
 
 .chapter-btn {
+    color: hsl(0, 0%, 100%);
     width: 100%;
     background: transparent;
     border: none;
