@@ -36,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const setSelector = document.getElementById("set-selector")
 
     // 2.2 Getting classes
-    const setOption = document.querySelectorAll(".set-option")
     const navigationControls = document.querySelector(".navigation-controls")
 
     // ==============================
@@ -55,6 +54,27 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("init() started")
         try {
             indexData = await loadIndex();
+
+            // clear the set selector
+            setSelector.innerHTML = "";
+
+            for (const set of indexData.sets) {
+                // create an option element in html. createElement creates a new DOM element
+                const option = document.createElement("option");
+                option.textContent = set.title;
+                option.value = set.file;
+                setSelector.appendChild(option);
+            }
+
+            setSelector.value = indexData.sets[0].file;
+
+            const defaultFile = indexData.sets[0].file;
+            setSelector.value = defaultFile;
+
+
+            await loadSetByFile(defaultFile);
+
+            // get first set (from a chosen set)
             const firstSet = indexData.sets[0];
 
             const setRes = await fetch(`sets_bank/${firstSet.file}`);
@@ -144,6 +164,20 @@ document.addEventListener("DOMContentLoaded", () => {
         renderQuestion();
     }
 
+    // for set selector. load the sets by file
+    async function loadSetByFile(file) {
+        const res = await fetch(`sets_bank/${file}`);
+        if (!res.ok) {
+            throw new Error(`Failed to load set file from (${res.status})`);
+        }
+
+        activeSetData = await res.json();
+        cursor = 0;
+
+        feedbackDisplay.textContent = "";
+        renderQuestion();
+    }
+
     // ==============================
     // EVENT LISTENERS
     // ==============================
@@ -161,6 +195,11 @@ document.addEventListener("DOMContentLoaded", () => {
     prevQuestion.addEventListener("click", () => {
         prevButton();
     })
+
+    setSelector.addEventListener("change", async () => {
+        const chosenFile = setSelector.value;
+        await loadSetByFile(chosenFile);
+    });
 
     init();
 

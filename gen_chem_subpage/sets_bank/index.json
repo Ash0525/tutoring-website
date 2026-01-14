@@ -13,6 +13,13 @@
             "file": "acids.json",
             "category:": "Acids",
             "tags": ["gen_chem", "naming"]
+        },
+        {
+            "id": "molecular_compounds",
+            "title": "Molecular Compounds",
+            "file": "molecular_compounds.json",
+            "category:": "Molecules",
+            "tags": ["gen_chem", "naming"]
         }
     ]
 }

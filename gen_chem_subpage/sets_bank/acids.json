@@ -1,0 +1,15 @@
+{
+  "id": "polyatomic_ions",
+  "title": "Polyatomic Ions",
+  "description": "Common polyatomic ions for General Chemistry memorization.",
+  
+  "answer_policy": {
+    "case_sensitive": false,
+    "trim_whitespace": true,
+    "collapse_spaces": true,
+    "normalize_charge": true
+  },
+  "pairs": [
+
+  ]
+}

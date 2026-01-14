@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="typing_bank.css">
 </head>
 <body>
+
+    <!-- NOTE: divs can hold JS outputs -->
     <h1 class="header">Type the correct answer</h1>
     <!-- Big div container -->
     <div id="main-root">
         <!-- Section 1: controls area, choose sets -->
         <section>
-            <button 
+            <!-- Choose set -->
+            <select 
                 id="set-selector" 
                 aria-expanded="false" 
                 aria-controls="set-list"
@@ -20,15 +23,7 @@
                 <span>Sets</span>
                 <span class="arrow">▾</span>
 
-            </button>
-
-            <!-- Choose a set to study from -->
-            <div class="chapter-content">
-                <!-- Note that 'set-option' will change based on what json we are getting out of -->
-                <button type="button" class="set-option">Set 1</button>
-                <button type="button" class="set-option">Set 2</button>
-                <button type="button" class="set-option">Set 3</button>
-            </div>
+            </select>
 
             <!-- Mode selector -->
              <div class="mode-selector">
@@ -73,7 +68,7 @@
 
             <!-- Response: did you get it right or wrong? -->
             <div id="feedback-display">
-                <!-- FIXME: JS for correct/incorrec feedback here -->
+                <!-- JS for correct/incorrect feedback here -->
             </div>
 
             <!-- Previous and Next buttons -->
