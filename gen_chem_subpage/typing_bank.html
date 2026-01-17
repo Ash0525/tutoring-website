@@ -18,26 +18,24 @@
         <!-- Section 1: controls area, choose sets -->
         <section>
             <!-- Choose set -->
-            <select 
-                id="set-selector" 
-                aria-expanded="false" 
-                aria-controls="set-list"
-                type="button">
-                <span>Sets</span>
-                <span class="arrow">▾</span>
-
-            </select>
+            <div id="set-selector-container">
+                <select 
+                    id="set-selector">
+                    <span>Sets</span>
+                    <span class="arrow">▾</span>
+                </select>
+            </div>
 
             <!-- Mode selector -->
              <div class="mode-selector">
                 <!-- Option for formula to name -->
-                <label>
+                <label class="label">
                     <input type="radio" name="mode" value="formula_to_name" checked>
                     Formula -> Name
                 </label>
 
                 <!-- Option for name to formula -->
-                <label>
+                <label class="label">
                     <input type="radio" name="mode" value="name_to_formula" checked>
                     Name -> Formula
                 </label>   
@@ -48,29 +46,30 @@
         <section>
 
             <!-- Display question -->
-            <div id="question-display">
+            <div id="question-display" class="display">
                 <!-- JS goes here -->
             </div>
 
             <!-- Submit answer -->
             <form id="answer-form">
+                <div id="answer-box">
+                    <!-- User input -->
+                    <input
+                        type="text"
+                        id="answer-input"
+                        autocomplete="off"
+                        spellcheck="false"
+                        placeholder="Type your answer here"
+                    >
 
-                <!-- User input -->
-                <input
-                    type="text"
-                    id="answer-input"
-                    autocomplete="off"
-                    spellcheck="false"
-                    placeholder="Type your answer here"
-                >
-
-                <button type="submit" id="submit-answer">
-                    Submit
-                </button>
+                    <button type="submit" id="submit-answer">
+                        Submit
+                    </button>
+                </div>
             </form>
 
             <!-- Response: did you get it right or wrong? -->
-            <div id="feedback-display">
+            <div id="feedback-display" class="display">
                 <!-- JS for correct/incorrect feedback here -->
             </div>
 

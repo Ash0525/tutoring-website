@@ -99,6 +99,7 @@ body {
 .nav-buttons {
     display: flex;
     flex-direction: row;
+    color: hsl(0, 0%, 100%);
     background:
         radial-gradient(1200px 500px at 50% 0%, hsla(0, 76%, 10%, 0.1), transparent 60%),
         radial-gradient(900px 600px at 15% 35%, hsla(217, 65%, 39%, 0.583), transparent 65%),
@@ -123,6 +124,10 @@ body {
         linear-gradient(180deg, hsl(220, 45%, 7%) 0%, hsl(222, 30%, 11%) 45%, hsl(223, 42%, 16%) 100%);
 }
 
+.label {
+    color: hsl(0, 0%, 100%);
+}
+
 .navigation-controls {
     display: flex;
     justify-content: center;
@@ -131,17 +136,67 @@ body {
 #answer-form {
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 }
 
-#feedback-display {
+#answer-box {
+    position: relative;
+    display: flex;
+    margin: 20px auto;
+    width: 35%;
+    flex-direction: row;
+    justify-content: center;
+    background:
+        radial-gradient(1200px 500px at 50% 0%, hsla(0, 0%, 100%, 0.10), transparent 60%),
+        radial-gradient(900px 600px at 15% 35%, hsla(217, 90%, 70%, 0.28), transparent 65%),
+        radial-gradient(900px 600px at 85% 35%, hsla(255, 80%, 65%, 0.22), transparent 65%),
+        radial-gradient(1000px 700px at 50% 80%, hsla(220, 50%, 5%, 0.55), transparent 70%),
+        linear-gradient(180deg, hsl(220, 45%, 7%) 0%, hsl(222, 40%, 11%) 45%, hsl(223, 42%, 16%) 100%);
+    border-radius: 16px;
+    border: 1px solid hsla(0, 0%, 100%, 0.25);
+}
+
+#answer-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: hsl(0, 0%, 100%);
+    font-size: 1.1rem;
+    padding: 10px 10px;
+}
+
+#submit-answer {
+    display: flex;
+    border-radius: 20;
+    margin: 10px;
+    border: none;
+    color: hsl(0, 0%, 100%);
+    background:
+        radial-gradient(1200px 500px at 50% 0%, hsla(0, 0%, 100%, 0.10), transparent 60%),
+        radial-gradient(900px 600px at 15% 35%, hsla(217, 90%, 70%, 0.28), transparent 65%),
+        radial-gradient(900px 600px at 85% 35%, hsla(255, 80%, 65%, 0.22), transparent 65%),
+        radial-gradient(1000px 700px at 50% 80%, hsla(220, 50%, 5%, 0.55), transparent 70%),
+        linear-gradient(180deg, hsl(220, 45%, 7%) 0%, hsl(222, 40%, 11%) 45%, hsl(223, 42%, 16%) 100%);
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#feedback-display, .display {
     display: flex;
     justify-content: center;
-    padding: 30px;
-
+    padding: 10px;
+    color: hsl(0, 0%, 100%);
+    width: 25%;
 }
 
-#question-display {
+#question-display, .display {
     display: flex;
+    text-align: center;
+    font-size: 2rem;
+    color: hsl(0, 0%, 100%);
+    justify-content: center;
     width: min(900px, 50%);
     margin: 30px auto;
     padding: 30px;
@@ -153,8 +208,33 @@ body {
         radial-gradient(900px 600px at 85% 35%, hsla(255, 100%, 36%, 0.22), transparent 65%),
         radial-gradient(1000px 700px at 50% 80%, hsla(220, 50%, 0%, 0.55), transparent 70%),
         linear-gradient(180deg, hsl(220, 45%, 7%) 0%, hsl(222, 30%, 11%) 45%, hsl(223, 42%, 16%) 100%);
-    box-shadow: 10px 10px 0px hsl(226, 86%, 25%);
+    box-shadow: 5px 5px 0px hsl(226, 86%, 25%);
     overflow: hidden;
 }
 
+#set-selector-container {
+    position: relative;
+    display: flex;
+    background: linear-gradient(180deg, hsl(220, 45%, 7%) 0%, hsl(222, 30%, 11%) 45%, hsl(223, 42%, 16%) 100%);
+    margin: 10px auto;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid hsla(0, 0%, 100%, 0.25);
+    padding: 25px;
+    width: 15%;
+    padding: 14px 18px;
+    border-radius: 10px;
+}
 
+#set-selector {
+    background: transparent;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    outline: none;
+
+}
+
+#set-selector option {
+    background-color: hsl(220, 45%, 7%);
+    opacity: 20%;
+}
