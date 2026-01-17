@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!activeSetData) return;
 
         // prev button logic
-        cursor = (cursor - 1) % activeSetData.pairs.length;
+        cursor = (cursor - 1 + activeSetData.pairs.length) % activeSetData.pairs.length;
 
         // call question
         renderQuestion();
