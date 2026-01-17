@@ -67,7 +67,6 @@ body {
     width:85%;
     border: 1px solid hsla(0, 0%, 100%, 0.25);
     box-shadow: 10px 10px 10px hsl(227, 95%, 7%);
-    color:hsl(0, 0%, 100%)
 
     background:
         radial-gradient(1200px 500px at 50% 0%, hsla(0, 0%, 100%, 0.10), transparent 60%),
