@@ -1,22 +1,131 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: serif;
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+    background:
+        /* soft top glow */
+        radial-gradient(
+        1200px 700px at 50% 0%,
+        rgba(255,255,255,0.10),
+        transparent 60%
+        ),
+
+        /* blue nebula left */
+        radial-gradient(
+        900px 700px at 15% 30%,
+        rgba(110,168,254,0.30),
+        transparent 65%
+        ),
+
+        /* purple-blue haze right */
+        radial-gradient(
+        900px 700px at 85% 35%,
+        rgba(140,120,255,0.22),
+        transparent 65%
+        ),
+
+        /* green-blue depth */
+        radial-gradient(
+        900px 800px at 75% 80%,
+        rgba(57,217,138,0.14),
+        transparent 70%
+        ),
+
+        /* dark vignette edges */
+        radial-gradient(
+        1200px 900px at 50% 50%,
+        transparent 40%,
+        rgba(0,0,0,0.55) 100%
+        ),
+
+        /* deep base */
+        linear-gradient(
+        180deg,
+        #070b16 0%,
+        #0b1220 45%,
+        #0f1b33 100%
+        );
+
+    background-attachment: fixed;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    color: hsl(0, 0%, 100%);
+}
+
+.header-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 40px auto;
+    border-radius: 15px;
+    width:85%;
+    border: 1px solid hsla(0, 0%, 100%, 0.25);
+    box-shadow: 10px 10px 10px hsl(227, 95%, 7%);
+
+    background:
+        radial-gradient(1200px 500px at 50% 0%, hsla(0, 0%, 100%, 0.10), transparent 60%),
+        radial-gradient(900px 600px at 15% 35%, hsla(217, 90%, 70%, 0.28), transparent 65%),
+        radial-gradient(900px 600px at 85% 35%, hsla(255, 80%, 65%, 0.22), transparent 65%),
+        radial-gradient(1000px 700px at 50% 80%, hsla(220, 50%, 5%, 0.55), transparent 70%),
+        linear-gradient(180deg, hsl(220, 45%, 7%) 0%, hsl(222, 40%, 11%) 45%, hsl(223, 42%, 16%) 100%);
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.10);
+}
+
+.mode-selector {
+    background:
+        radial-gradient(1200px 500px at 50% 0%, hsla(0, 0%, 100%, 0.10), transparent 60%),
+        radial-gradient(900px 600px at 15% 35%, hsla(217, 90%, 70%, 0.28), transparent 65%),
+        radial-gradient(900px 600px at 85% 35%, hsla(255, 80%, 65%, 0.22), transparent 65%),
+        radial-gradient(1000px 700px at 50% 80%, hsla(220, 50%, 5%, 0.55), transparent 70%),
+        linear-gradient(180deg, hsl(220, 45%, 7%) 0%, hsl(222, 40%, 11%) 45%, hsl(223, 42%, 16%) 100%);
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.10);
+    width: 40%; /* shrinks the box */
+    border-radius: 20px; /* rounds edges */
+    border: 1px solid hsla(0, 0%, 80%, 0.25);
+    box-shadow: 5px 5px 5px hsl(227, 95%, 7%);
+    display: flex; /* allows for flexbox */
+    flex-direction: column; /* column configuration */
+    text-align: center; /* center text */
+    margin: 40px auto;
 }
 
 .nav-buttons {
     display: flex;
     flex-direction: row;
-    background: pink;
+    background:
+        radial-gradient(1200px 500px at 50% 0%, hsla(0, 76%, 10%, 0.1), transparent 60%),
+        radial-gradient(900px 600px at 15% 35%, hsla(217, 65%, 39%, 0.583), transparent 65%),
+        radial-gradient(900px 600px at 85% 35%, hsla(255, 100%, 46%, 0.22), transparent 65%),
+        radial-gradient(1000px 700px at 50% 80%, hsla(220, 50%, 5%, 0.55), transparent 70%),
+        linear-gradient(180deg, hsl(220, 45%, 7%) 0%, hsl(222, 40%, 11%) 45%, hsl(223, 42%, 16%) 100%);
+    
     justify-content: center;
     cursor: pointer;
+    margin: 10px;
+    border-radius: 20px;
     padding: 20px 20px;
+}
+
+/* darkens color upon hovering */
+.nav-buttons:hover {
+        background:
+        radial-gradient(1200px 500px at 50% 0%, hsla(0, 76%, 5%, 0.1), transparent 60%),
+        radial-gradient(900px 600px at 15% 35%, hsla(217, 65%, 30%, 0.583), transparent 65%),
+        radial-gradient(900px 600px at 85% 35%, hsla(255, 100%, 36%, 0.22), transparent 65%),
+        radial-gradient(1000px 700px at 50% 80%, hsla(220, 50%, 0%, 0.55), transparent 70%),
+        linear-gradient(180deg, hsl(220, 45%, 7%) 0%, hsl(222, 30%, 11%) 45%, hsl(223, 42%, 16%) 100%);
 }
 
 .navigation-controls {
     display: flex;
     justify-content: center;
-
 }
 
 #answer-form {
@@ -32,12 +141,18 @@ body {
 }
 
 #question-display {
+    display: flex;
     width: min(900px, 50%);
     margin: 30px auto;
     padding: 30px;
     border: 2px solid hsl(0, 0%, 0%);
     border-radius: 30px;
-    background: hsl(212, 76%, 72%);
+    background:
+        radial-gradient(1200px 500px at 50% 0%, hsla(0, 61%, 25%, 0.244), transparent 50%),
+        radial-gradient(900px 600px at 15% 35%, hsla(217, 89%, 44%, 0.583), transparent 65%),
+        radial-gradient(900px 600px at 85% 35%, hsla(255, 100%, 36%, 0.22), transparent 65%),
+        radial-gradient(1000px 700px at 50% 80%, hsla(220, 50%, 0%, 0.55), transparent 70%),
+        linear-gradient(180deg, hsl(220, 45%, 7%) 0%, hsl(222, 30%, 11%) 45%, hsl(223, 42%, 16%) 100%);
     box-shadow: 10px 10px 0px hsl(226, 86%, 25%);
     overflow: hidden;
 }
