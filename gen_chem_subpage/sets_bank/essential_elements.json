@@ -1,0 +1,175 @@
+{
+  "id": "essential_elements",
+  "title": "Essential Elements",
+  "description": "Common elements for General Chemistry memorization.",
+  
+  "answer_policy": {
+    "case_sensitive": false,
+    "trim_whitespace": true,
+    "collapse_spaces": true,
+    "normalize_charge": true
+  },
+
+  "pairs": [
+    {
+        "formula": "Hydrogen",
+        "names": ["H 1"]
+    },
+    {
+        "formula": "Helium",
+        "names": ["He 2"]
+    },
+    {
+        "formula": "Lithium",
+        "names": ["Li 3"]
+    },
+    {
+        "formula": "Beryllium",
+        "names": ["Be 4"]
+    },
+    {
+        "formula": "Boron",
+        "names": ["H 5"]
+    },
+    {
+        "formula": "Carbon",
+        "names": ["H 6"]
+    },
+    {
+        "formula": "Nitrogen",
+        "names": ["H 7"]
+    },
+    {
+        "formula": "Oxygen",
+        "names": ["H 8"]
+    },
+    {
+        "formula": "Fluorine",
+        "names": ["H 9"]
+    },
+    {
+        "formula": "Neon",
+        "names": ["H 10"]
+    },
+    {
+        "formula": "Sodium",
+        "names": ["H 11"]
+    },
+    {
+        "formula": "Magnesium",
+        "names": ["H 12"]
+    },
+    {
+        "formula": "Aluminum",
+        "names": ["H 13"]
+    },
+    {
+        "formula": "Silicon",
+        "names": ["H 14"]
+    },
+    {
+        "formula": "Phosphorus",
+        "names": ["H 15"]
+    },
+    {
+        "formula": "Sulfur",
+        "names": ["H 16"]
+    },
+    {
+        "formula": "Chlorine",
+        "names": ["H 17"]
+    },
+    {
+        "formula": "Argon",
+        "names": ["H 18"]
+    },
+    {
+        "formula": "Potassium",
+        "names": ["H 19"]
+    },
+    {
+        "formula": "Calcium",
+        "names": ["H 20"]
+    },
+    {
+        "formula": "Scandium",
+        "names": ["H 21"]
+    },
+    {
+        "formula": "Titanium",
+        "names": ["H 22"]
+    },
+    {
+        "formula": "Vanadium",
+        "names": ["H 23"]
+    },
+    {
+        "formula": "Chromium",
+        "names": ["H 24"]
+    },
+    {
+        "formula": "Manganese",
+        "names": ["H 25"]
+    },
+    {
+        "formula": "Iron",
+        "names": ["H 26"]
+    },
+    {
+        "formula": "Cobalt",
+        "names": ["H 27"]
+    },
+    {
+        "formula": "Nickel",
+        "names": ["H 28"]
+    },
+    {
+        "formula": "Copper",
+        "names": ["H 29"]
+    },
+    {
+        "formula": "Zinc",
+        "names": ["H 30"]
+    },
+    {
+        "formula": "Gallium",
+        "names": ["H 31"]
+    },
+    {
+        "formula": "Germanium",
+        "names": ["H 32"]
+    },
+    {
+        "formula": "Arsenic",
+        "names": ["H 33"]
+    },
+    {
+        "formula": "Selenium",
+        "names": ["H 34"]
+    },
+    {
+        "formula": "Bromine",
+        "names": ["H 35"]
+    },
+    {
+        "formula": "Krypton",
+        "names": ["H 36"]
+    },
+    {
+        "formula": "Silver",
+        "names": ["H 47"]
+    },
+    {
+        "formula": "Gold",
+        "names": ["H 79"]
+    },
+    {
+        "formula": "Mercury",
+        "names": ["H 80"]
+    },
+    {
+        "formula": "Lead",
+        "names": ["H 82"]
+    }
+  ]
+}
