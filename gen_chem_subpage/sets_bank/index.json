@@ -20,6 +20,13 @@
             "file": "molecular_compounds.json",
             "category:": "Molecules",
             "tags": ["gen_chem", "naming"]
+        },
+        {
+            "id": "essential_elements",
+            "title": "Essential Elements",
+            "file": "essential_elements.json",
+            "category:": "Elements",
+            "tags": ["gen_chem", "elements"]
         }
     ]
 }
