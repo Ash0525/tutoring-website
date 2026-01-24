@@ -29,147 +29,147 @@
     },
     {
         "formula": "Boron",
-        "names": ["H 5"]
+        "names": ["B 5"]
     },
     {
         "formula": "Carbon",
-        "names": ["H 6"]
+        "names": ["C 6"]
     },
     {
         "formula": "Nitrogen",
-        "names": ["H 7"]
+        "names": ["N 7"]
     },
     {
         "formula": "Oxygen",
-        "names": ["H 8"]
+        "names": ["O 8"]
     },
     {
         "formula": "Fluorine",
-        "names": ["H 9"]
+        "names": ["Fl 9"]
     },
     {
         "formula": "Neon",
-        "names": ["H 10"]
+        "names": ["Ne 10"]
     },
     {
         "formula": "Sodium",
-        "names": ["H 11"]
+        "names": ["Na 11"]
     },
     {
         "formula": "Magnesium",
-        "names": ["H 12"]
+        "names": ["Mg 12"]
     },
     {
         "formula": "Aluminum",
-        "names": ["H 13"]
+        "names": ["Al 13"]
     },
     {
         "formula": "Silicon",
-        "names": ["H 14"]
+        "names": ["Si 14"]
     },
     {
         "formula": "Phosphorus",
-        "names": ["H 15"]
+        "names": ["P 15"]
     },
     {
         "formula": "Sulfur",
-        "names": ["H 16"]
+        "names": ["S 16"]
     },
     {
         "formula": "Chlorine",
-        "names": ["H 17"]
+        "names": ["Cl 17"]
     },
     {
         "formula": "Argon",
-        "names": ["H 18"]
+        "names": ["Ar 18"]
     },
     {
         "formula": "Potassium",
-        "names": ["H 19"]
+        "names": ["K 19"]
     },
     {
         "formula": "Calcium",
-        "names": ["H 20"]
+        "names": ["Ca 20"]
     },
     {
         "formula": "Scandium",
-        "names": ["H 21"]
+        "names": ["Sc 21"]
     },
     {
         "formula": "Titanium",
-        "names": ["H 22"]
+        "names": ["Ti 22"]
     },
     {
         "formula": "Vanadium",
-        "names": ["H 23"]
+        "names": ["V 23"]
     },
     {
         "formula": "Chromium",
-        "names": ["H 24"]
+        "names": ["Cr 24"]
     },
     {
         "formula": "Manganese",
-        "names": ["H 25"]
+        "names": ["Mn 25"]
     },
     {
         "formula": "Iron",
-        "names": ["H 26"]
+        "names": ["Fe 26"]
     },
     {
         "formula": "Cobalt",
-        "names": ["H 27"]
+        "names": ["Co 27"]
     },
     {
         "formula": "Nickel",
-        "names": ["H 28"]
+        "names": ["Ni 28"]
     },
     {
         "formula": "Copper",
-        "names": ["H 29"]
+        "names": ["Cu 29"]
     },
     {
         "formula": "Zinc",
-        "names": ["H 30"]
+        "names": ["Zn 30"]
     },
     {
         "formula": "Gallium",
-        "names": ["H 31"]
+        "names": ["Ga 31"]
     },
     {
         "formula": "Germanium",
-        "names": ["H 32"]
+        "names": ["Ge 32"]
     },
     {
         "formula": "Arsenic",
-        "names": ["H 33"]
+        "names": ["As 33"]
     },
     {
         "formula": "Selenium",
-        "names": ["H 34"]
+        "names": ["Se 34"]
     },
     {
         "formula": "Bromine",
-        "names": ["H 35"]
+        "names": ["Br 35"]
     },
     {
         "formula": "Krypton",
-        "names": ["H 36"]
+        "names": ["Kr 36"]
     },
     {
         "formula": "Silver",
-        "names": ["H 47"]
+        "names": ["Ag 47"]
     },
     {
         "formula": "Gold",
-        "names": ["H 79"]
+        "names": ["Au 79"]
     },
     {
         "formula": "Mercury",
-        "names": ["H 80"]
+        "names": ["Hg 80"]
     },
     {
         "formula": "Lead",
-        "names": ["H 82"]
+        "names": ["Pb 82"]
     }
   ]
 }
