@@ -20,7 +20,7 @@
         "names": ["nitrite"]
     },
     {
-        "formula": "N3^-",
+        "formula": "N^3-",
         "names": ["nitride"]
     },
     {
@@ -112,45 +112,98 @@
         "names": ["carbonate"]
     },
         {
-        "formula": "IO4^-",
+        "formula": "HCO3^-",
         "names": ["hydrogen carbonate", "bicarbonate"]
     },
         {
-        "formula": "IO4^-",
-        "names": ["sulfide"]
-    },
-        {
-        "formula": "IO4^-",
-        "names": ["sulfate"]
-    },
-        {
-        "formula": "IO4^-",
+        "formula": "HSO4^-",
         "names": ["hydrogen sulfate", "bisulfate"]
     },
         {
-        "formula": "IO4^-",
-        "names": ["phosphate"]
+        "formula": "HSO3^-",
+        "names": ["hydrogen sulfite", "bisulfite"]
     },
         {
-        "formula": "IO4^-",
-        "names": ["hdrogen phosphate"]
+        "formula": "HPO4^2-",
+        "names": ["hydrogen phosphate"]
     },
         {
-        "formula": "IO4^-",
+        "formula": "H2PO4^-",
         "names": ["dihydrogen phosphate"]
     },
         {
-        "formula": "IO4^-",
-        "names": ["phosphite"]
-    },
-        {
-        "formula": "IO4^-",
+        "formula": "HPO3^2-",
         "names": ["hydrogen phosphite"]
     },
         {
-        "formula": "IO4^-",
+        "formula": "H2PO3^-",
         "names": ["dihydrogen phosphite"]
+    },
+        {
+        "formula": "OH^-",
+        "names": ["hydroxide"]
+    },
+        {
+        "formula": "NH4^+",
+        "names": ["ammonium"]
+    },
+        {
+        "formula": "C2H3O2^-",
+        "names": ["acetate"]
+    },
+        {
+        "formula": "C2O4^2-",
+        "names": ["oxalate"]
+    },
+        {
+        "formula": "CrO4^2-",
+        "names": ["chromate"]
+    },
+        {
+        "formula": "Cr2O7^2-",
+        "names": ["dichromate"]
+    },
+        {
+        "formula": "MnO4^-",
+        "names": ["permanganate"]
+    },
+        {
+        "formula": "S2^2-",
+        "names": ["disulfide"]
+    },
+        {
+        "formula": "S2O3^2-",
+        "names": ["thiosulfate"]
+    },
+        {
+        "formula": "CN^-",
+        "names": ["cyanide"]
+    },
+        {
+        "formula": "O2^2-",
+        "names": ["peroxide"]
+    },
+        {
+        "formula": "O2^-",
+        "names": ["superoxide"]
+    },
+        {
+        "formula": "N3^-",
+        "names": ["azide"]
+    },
+        {
+        "formula": "BO3^3-",
+        "names": ["borate"]
+    },
+        {
+        "formula": "H3O^+",
+        "names": ["hydronium"]
+    },
+        {
+        "formula": "P2O7^4-",
+        "names": ["pyrophosphate"]
     }
+
     
   ]
 }
