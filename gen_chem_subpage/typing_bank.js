@@ -4,9 +4,10 @@ console.log("typing_log.js loaded")
 // ==============================
 
 // 1.1 Set and mode
-let activeSetId;;
+let activeSetId;
 let activeSetFile;
-let mode;
+let direction = "formula_to_name"; // default direction
+let isRandomMode = false;
 let indexData = null;   // holds parsed sets_bank/index.json
 let activeSetData = null;   // holds parsed sets_bank/<set>.json
 
@@ -37,6 +38,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 2.2 Getting classes
     const navigationControls = document.querySelector(".navigation-controls")
+
+    // 2.3 Getting mode radios (includes formula to name and random)
+    const directionsRadios = document.querySelectorAll('input[name="direction"]');
+    const randomToggle = document.getElementById('random-toggle');
 
     // ==============================
     // FUNCTIONS
@@ -93,7 +98,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // 3.1.3 Load the question
     function renderQuestion() {
         console.log("renderQuestion initiated")
-        const pair = activeSetData.pairs[cursor];
+
+        // this is for safety
+        if (!activeSetData || questionOrder.length === 0) return;
+        
+        const pairIndex = questionOrder[cursor];
+        const pair = activeSetData.pairs[pairIndex];
 
         questionDisplay.textContent = pair.formula;
         answerInput.value = "";
@@ -105,10 +115,34 @@ document.addEventListener("DOMContentLoaded", () => {
         return userInput;
     }
 
+    // this function builds the question order
+    function buildQuestionOrder() {
+        if (!activeSetData) return;
+
+        // build array
+        questionOrder = Array.from(
+            { length: activeSetData.pairs.length},
+            (_, i) => i
+        );
+
+        // random mode shuffle
+        if (isRandomMode) {
+            for (let i = questionOrder.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [questionOrder[i], questionOrder[j]] = [questionOrder[j], questionOrder[i]];
+            }
+        }
+
+        // reset cursor
+        cursor = 0;
+    }
+
     // 3.1.5 Check answer function
     function checkAnswer() {
         console.log("checkedAnswer initiated")
-        const pair = activeSetData.pairs[cursor];
+        const pairIndex = questionOrder[cursor];
+        const pair = activeSetData.pairs[pairIndex];
+
         const userInput = answerInput.value;
 
         let normalizedInput = normalizeInput(userInput);
@@ -128,7 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // what happens if isCorrect == true?
         if (isCorrect) {
             // Increment cursor, modulo with length of pairs list
-            cursor = (cursor + 1) % activeSetData.pairs.length; 
+            cursor = (cursor + 1) % questionOrder.length; 
 
             // call for next question
             renderQuestion();
@@ -143,7 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!activeSetData) return;
         
         // next button logic
-        cursor = (cursor + 1) % activeSetData.pairs.length;
+        cursor = (cursor + 1) % questionOrder.length;
 
         // call question
         renderQuestion();
@@ -154,7 +188,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!activeSetData) return;
 
         // prev button logic
-        cursor = (cursor - 1 + activeSetData.pairs.length) % activeSetData.pairs.length;
+        cursor = (cursor - 1 + questionOrder.length) % questionOrder.length;
 
         // call question
         renderQuestion();
@@ -168,6 +202,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         activeSetData = await res.json();
+        buildQuestionOrder();
+
         cursor = 0;
 
         if (typeof feedbackDisplay !== "undefined" && feedbackDisplay) {
@@ -176,6 +212,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         renderQuestion();
     }
+
+
 
     // ==============================
     // EVENT LISTENERS
@@ -199,6 +237,25 @@ document.addEventListener("DOMContentLoaded", () => {
         const chosenFile = setSelector.value;
         await loadSetByFile(chosenFile);
     });
+
+    directionsRadios.forEach(radio => {
+        radio.addEventListener("change", () => {
+            direction = radio.value;
+            console.log("Direction changed to:", direction);
+            renderQuestion();
+        });
+    });
+
+    if (randomToggle) {
+        randomToggle.addEventListener("change", () => {
+            isRandomMode = randomToggle.checked;
+            console.log("Random mode changed to:", isRandomMode);
+            buildQuestionOrder();
+            renderQuestion();
+        });
+    } else {
+        console.warn("Random toggle element not found.");
+    }
 
     init();
 

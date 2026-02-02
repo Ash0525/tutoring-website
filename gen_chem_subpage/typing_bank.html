@@ -30,15 +30,20 @@
              <div class="mode-selector">
                 <!-- Option for formula to name -->
                 <label class="label">
-                    <input type="radio" name="mode" value="formula_to_name" checked>
+                    <input type="radio" name="direction" value="formula_to_name" checked>
                     Formula -> Name
                 </label>
 
                 <!-- Option for name to formula -->
                 <label class="label">
-                    <input type="radio" name="mode" value="name_to_formula" checked>
+                    <input type="radio" name="direction" value="name_to_formula" checked>
                     Name -> Formula
-                </label>   
+                </label>  
+                
+                <!-- Option for mixed mode -->
+                <label class="label"></label>
+                    <input type="checkbox" name="mode" id="random-toggle" value="random" checked>
+                    Mixed
              </div>
         </section>
 

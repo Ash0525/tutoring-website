@@ -202,6 +202,18 @@
         {
         "formula": "P2O7^4-",
         "names": ["pyrophosphate"]
+    },
+        {
+        "formula": "AsO4^3-",
+        "names": ["arsenate"]
+    },
+        {
+        "formula": "AsO3^3-",
+        "names": ["arsenite"]
+    },
+        {
+        "formula":"Hg2^2+",
+        "names": ["mercury(I)","mercurous"]
     }
 
     
