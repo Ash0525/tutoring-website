@@ -212,10 +212,9 @@
         "names": ["arsenite"]
     },
         {
-        "formula":"Hg2^2+",
-        "names": ["mercury(I)","mercurous"]
+        "formula":"SCN^-",
+        "names": ["thiocyanate"]
     }
 
-    
   ]
 }

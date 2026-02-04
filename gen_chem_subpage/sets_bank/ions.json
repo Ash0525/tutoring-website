@@ -1,0 +1,51 @@
+{
+  "id": "ions",
+  "title": "Ions",
+  "description": "Common ions for General Chemistry memorization.",
+  
+  "answer_policy": {
+    "case_sensitive": false,
+    "trim_whitespace": true,
+    "collapse_spaces": true,
+    "normalize_charge": true
+  },
+  "pairs": [
+    {
+        "formula": "Chromium, Cr",
+        "names": ["2+, 3+"]
+    },
+        {
+        "formula": "Manganese, Mn",
+        "names": ["2+, 3+"]
+    },
+        {
+        "formula": "Iron, Fe",
+        "names": ["2+, 3+"]
+    },
+        {
+        "formula": "Silver, Ag",
+        "names": ["1+"]
+    },
+        {
+        "formula": "Cadmium, Cd",
+        "names": ["2+"]
+    },
+        {
+        "formula": "Tin, Sn",
+        "names": ["2+, 4+"]
+    },
+        {
+        "formula": "Gold, Au",
+        "names": ["1+, 3+"]
+    },
+        {
+        "formula": "Mercury, Hg",
+        "names": ["Hg2^2+, Hg^2+"]
+    },
+        {
+        "formula": "Aluminum, Al",
+        "names": ["3+"]
+    }
+    
+  ]
+}
