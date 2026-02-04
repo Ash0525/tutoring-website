@@ -27,6 +27,14 @@
             "file": "essential_elements.json",
             "category:": "Elements",
             "tags": ["gen_chem", "elements"]
+        },
+        {
+            "id": "ions",
+            "title": "Ions",
+            "file": "ions.json",
+            "category:": "Ions",
+            "tags": ["ions"]
+
         }
     ]
 }
