@@ -27,17 +27,19 @@ let hasSubmitted = false;
 document.addEventListener("DOMContentLoaded", () => {
 
     // 2.1 Getting element ids
-    const questionDisplay = document.getElementById("question-display")
-    const feedbackDisplay = document.getElementById("feedback-display")
-    const answerForm = document.getElementById("answer-form")
-    const answerInput = document.getElementById("answer-input")
-    const submitAnswer = document.getElementById("submit-answer")
-    const prevQuestion = document.getElementById("prev-question")
-    const nextQuestion = document.getElementById("next-question")
-    const setSelector = document.getElementById("set-selector")
+    const questionDisplay = document.getElementById("question-display");
+    const feedbackDisplay = document.getElementById("feedback-display");
+    const answerForm = document.getElementById("answer-form");
+    const answerInput = document.getElementById("answer-input");
+    const submitAnswer = document.getElementById("submit-answer");
+    const prevQuestion = document.getElementById("prev-question");
+    const nextQuestion = document.getElementById("next-question");
+    const setSelector = document.getElementById("set-selector");
+    const showAnswerBtn = document.getElementById("show-answer");
+    const showAnswerDisplay = document.getElementById("show-answer-display");
 
     // 2.2 Getting classes
-    const navigationControls = document.querySelector(".navigation-controls")
+    const navigationControls = document.querySelector(".navigation-controls");
 
     // 2.3 Getting mode radios (includes formula to name and random)
     const directionsRadios = document.querySelectorAll('input[name="direction"]');
@@ -100,13 +102,27 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("renderQuestion initiated")
 
         // this is for safety
-        if (!activeSetData || questionOrder.length === 0) return;
+        if (!activeSetData) return;
+        if (!Array.isArray(questionOrder) || questionOrder.length === 0) buildQuestionOrder();
+
         
         const pairIndex = questionOrder[cursor];
         const pair = activeSetData.pairs[pairIndex];
 
-        questionDisplay.textContent = pair.formula;
+        if (direction === "formula_to_name") {
+            questionDisplay.textContent = pair.formula;
+            answerInput.placeholder = "Type the name...";
+        } else if (direction === "name_to_formula") {
+            questionDisplay.textContent = pair.names[0];
+            answerInput.placeholder = "Type the formula...";
+        } else {
+            console.warn("Unknown direction:", direction);
+            questionDisplay.textContent = pair.formula;
+        }
+
         answerInput.value = "";
+        showAnswerDisplay.textContent = "";
+        clearShowAnswer();
     }
 
     // 3.1.4 Normalize the input
@@ -139,38 +155,60 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 3.1.5 Check answer function
     function checkAnswer() {
-        console.log("checkedAnswer initiated")
+        console.log("checkAnswer initiated");
+
         const pairIndex = questionOrder[cursor];
         const pair = activeSetData.pairs[pairIndex];
 
         const userInput = answerInput.value;
+        const normalizedInput = normalizeInput(userInput);
 
-        let normalizedInput = normalizeInput(userInput);
+        let isCorrect = false;
 
-        // iterate through the list (in case we have another name for the same ion)
-        const isCorrect = pair.names.some(name => {
-            return normalizeInput(name) === normalizedInput;
-        });
+        if (direction === "formula_to_name") {
+            // user types a name, accept any alias in pair.names
+            isCorrect = pair.names.some(name => normalizeInput(name) === normalizedInput);
 
-        // is user input correct?
-        const displayStatement = isCorrect 
-            ? "Yay! Correct!" 
-            : "Incorrect, try again."
-
-        feedbackDisplay.textContent = displayStatement;
-
-        // what happens if isCorrect == true?
-        if (isCorrect) {
-            // Increment cursor, modulo with length of pairs list
-            cursor = (cursor + 1) % questionOrder.length; 
-
-            // call for next question
-            renderQuestion();
+        } else if (direction === "name_to_formula") {
+            // user types the formula
+            isCorrect = normalizeInput(pair.formula) === normalizedInput;
 
         } else {
-            console.log("User got it wrong, they have to attempt again.")
+            console.warn("Unknown direction:", direction);
+        }
+
+        feedbackDisplay.textContent = isCorrect ? "Yay! Correct!" : "Incorrect, try again.";
+
+        if (isCorrect) {
+            cursor = (cursor + 1) % questionOrder.length;
+            renderQuestion();
+        } else {
+            console.log("User got it wrong, they have to attempt again.");
         }
     }
+
+    function showAnswer() {
+
+        // safety guards
+        if (!activeSetData || questionOrder.length === 0) return;
+
+        const pairIndex = questionOrder[cursor];
+        const pair = activeSetData.pairs[pairIndex];
+
+        let answerText = "";
+
+        if (direction === "formula_to_name") {
+            answerText = pair.names.join(", ");
+        } else if (direction === "name_to_formula") {
+            answerText = pair.formula;
+        } else {
+            console.warn("Unknown direction:", direction);
+            return;
+        }
+
+        showAnswerDisplay.textContent = `Answer: ${answerText}`;
+    }
+
 
     function nextButton() {
         // guard
@@ -192,6 +230,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // call question
         renderQuestion();
+    }
+
+    function clearShowAnswer() {
+        if (showAnswerDisplay) showAnswerDisplay.textContent = "";
     }
 
     // for set selector. load the sets by file
@@ -223,15 +265,19 @@ document.addEventListener("DOMContentLoaded", () => {
     answerForm.addEventListener("submit", (e) => {
         e.preventDefault();
         checkAnswer();
-    })
+    });
+
+    showAnswerBtn.addEventListener("click", () => {
+        showAnswer();
+    });
 
     nextQuestion.addEventListener("click", () => {
         nextButton();
-    })
+    });
     
     prevQuestion.addEventListener("click", () => {
         prevButton();
-    })
+    });
 
     setSelector.addEventListener("change", async () => {
         const chosenFile = setSelector.value;
@@ -242,7 +288,11 @@ document.addEventListener("DOMContentLoaded", () => {
         radio.addEventListener("change", () => {
             direction = radio.value;
             console.log("Direction changed to:", direction);
+
+            // optional: keep same order, or rebuild (especially useful in random mode)
+            buildQuestionOrder();
             renderQuestion();
+            clearShowAnswer();
         });
     });
 
@@ -252,6 +302,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Random mode changed to:", isRandomMode);
             buildQuestionOrder();
             renderQuestion();
+            clearShowAnswer();
         });
     } else {
         console.warn("Random toggle element not found.");
