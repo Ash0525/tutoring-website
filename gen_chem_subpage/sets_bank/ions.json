@@ -45,6 +45,10 @@
         {
         "formula": "Aluminum, Al",
         "names": ["3+"]
+    },
+        {
+        "formula": "Zinc, Zn",
+        "names": ["2+"]
     }
     
   ]
