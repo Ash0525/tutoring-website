@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="../main_page.css">
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" id="navbar-logo">
+                <img src="../images/blocky-no-bckgrd.png" alt="Student's POV logo" class="navbar-logo-img">
+                STUDENT'S POV
+            </a>
+            <div class="navbar-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar-menu">
+                <li class="navbar-item">
+                    <a href="../index.html" class="navbar-links">Home</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="portfolio.html" class="navbar-links">Portfolio</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="about.html" class="navbar-links">About</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="../index.html#lessons" class="navbar-links">Lessons</a>
+                </li>
+                <li class="navbar-btn">
+                    <a href="../index.html#lessons" class="button">Start Learning</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Employer-focused portfolio hero section -->
+        <section class="portfolio-hero">
+            <div class="portfolio-hero-content">
+                <p class="portfolio-label">Engineering Portfolio</p>
+                <h2>Student engineer building lessons, tools, and technical projects</h2>
+                <p>
+                    I use this portfolio to collect my engineering projects, tutorial
+                    work, and technical growth in one place for employers and collaborators.
+                </p>
+
+                <div class="portfolio-hero-actions">
+                    <a href="#" class="portfolio-hero-button">
+                        <span>View Resume</span>
+                    </a>
+                    <a href="#portfolio-projects" class="portfolio-secondary-button">
+                        View Projects
+                    </a>
+                </div>
+            </div>
+
+            <aside class="portfolio-feature-panel">
+                <img src="../images/oscilloscope-blocky.png" alt="Oscilloscope project preview">
+                <div class="portfolio-feature-caption">
+                    <p class="portfolio-label">Featured Preview</p>
+                    <h3>Circuit lessons and project walkthroughs</h3>
+                </div>
+            </aside>
+        </section>
+
+        <!-- Portfolio Projects Section -->
+        <section class="portfolio-section" id="portfolio-projects">
+            <div class="portfolio-section-header">
+                <p class="portfolio-label">Featured Work</p>
+                <h2>Projects I am building as I learn</h2>
+                <p>
+                    These projects show my progress with circuits, programming,
+                    simulations, and engineering problem solving.
+                </p>
+            </div>
+
+            <div class="portfolio-grid">
+                <article class="project-card">
+                    <span class="status-badge">In Progress</span>
+                    <h3>Circuit Analysis Lessons</h3>
+                    <p>
+                        A beginner-friendly lesson series for understanding voltage,
+                        current, resistance, and circuit-solving methods.
+                    </p>
+                </article>
+
+                <article class="project-card">
+                    <span class="status-badge">Planned</span>
+                    <h3>Engineering Calculator</h3>
+                    <p>
+                        A small web tool for solving common math, physics, or circuit
+                        problems step by step.
+                    </p>
+                </article>
+
+                <article class="project-card">
+                    <span class="status-badge">Planned</span>
+                    <h3>Simulation Notes</h3>
+                    <p>
+                        Notes and visual examples from simulations, labs, and technical
+                        experiments.
+                    </p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <script src="../index.js"></script>
+</body>
+</html>
