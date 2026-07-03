@@ -1,0 +1,193 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="700" viewBox="0 0 700 700" fill="none">
+  <style>
+    .outline {
+      stroke: white;
+      stroke-width: 4;
+      fill: none;
+    }
+
+    .outline-small {
+      stroke: white;
+      stroke-width: 3;
+      fill: none;
+    }
+
+    .blue {
+      stroke: hsl(225, 86%, 70%);
+    }
+
+    .dot-blue {
+      fill: hsl(225, 86%, 70%);
+    }
+
+    .dot-white {
+      fill: white;
+    }
+  </style>
+  <defs>
+    <!-- Oscilloscope -->
+    <symbol id="oscilloscope" viewBox="0 0 230 150">
+      <rect x="0" y="0" width="230" height="130" rx="14" stroke="white" stroke-width="4"/>
+      <rect x="25" y="25" width="130" height="75" rx="8" stroke="white" stroke-width="3"/>
+      <path d="M40 62 C55 20, 75 105, 95 62 S130 62, 145 62"
+            stroke="hsl(225, 86%, 70%)" stroke-width="4"/>
+      <circle cx="190" cy="35" r="14" stroke="white" stroke-width="4"/>
+      <circle cx="190" cy="75" r="14" stroke="white" stroke-width="4"/>
+      <rect x="35" y="130" width="35" height="14" stroke="white" stroke-width="3"/>
+      <rect x="165" y="130" width="35" height="14" stroke="white" stroke-width="3"/>
+    </symbol>
+
+    <!-- Sig Gen -->
+    <symbol id="signal-generator" viewBox="0 0 260 120">
+      <rect x="0" y="0" width="260" height="105" rx="12" stroke="white" stroke-width="4"/>
+      <rect x="25" y="25" width="95" height="55" rx="7" stroke="hsl(225, 86%, 70%)" stroke-width="3"/>
+      <path d="M35 52 C50 15, 75 90, 95 52 L115 52"
+            stroke="hsl(225, 86%, 70%)" stroke-width="4"/>
+      <circle cx="215" cy="35" r="20" stroke="white" stroke-width="4"/>
+      <circle cx="155" cy="75" r="10" stroke="white" stroke-width="3"/>
+      <circle cx="185" cy="75" r="10" stroke="white" stroke-width="3"/>
+      <circle cx="220" cy="75" r="10" stroke="white" stroke-width="3"/>
+    </symbol>
+
+    <!-- CPU / Microprocessor -->
+    <symbol id="cpu" viewBox="0 0 180 180">
+      <rect x="35" y="35" width="110" height="110" rx="12" class="outline"/>
+      <rect x="60" y="60" width="60" height="60" rx="6" class="outline-small blue"/>
+
+      <!-- pins -->
+      <g class="outline-small">
+        <line x1="50" y1="15" x2="50" y2="35"/>
+        <line x1="75" y1="15" x2="75" y2="35"/>
+        <line x1="100" y1="15" x2="100" y2="35"/>
+        <line x1="125" y1="15" x2="125" y2="35"/>
+
+        <line x1="50" y1="145" x2="50" y2="165"/>
+        <line x1="75" y1="145" x2="75" y2="165"/>
+        <line x1="100" y1="145" x2="100" y2="165"/>
+        <line x1="125" y1="145" x2="125" y2="165"/>
+
+        <line x1="15" y1="50" x2="35" y2="50"/>
+        <line x1="15" y1="75" x2="35" y2="75"/>
+        <line x1="15" y1="100" x2="35" y2="100"/>
+        <line x1="15" y1="125" x2="35" y2="125"/>
+
+        <line x1="145" y1="50" x2="165" y2="50"/>
+        <line x1="145" y1="75" x2="165" y2="75"/>
+        <line x1="145" y1="100" x2="165" y2="100"/>
+        <line x1="145" y1="125" x2="165" y2="125"/>
+      </g>
+    </symbol>
+
+    <!-- Resistors -->
+    <symbol id="resistor" viewBox="0 0 180 60">
+      <circle cx="10" cy="30" r="6" stroke="white" stroke-width="4"/>
+      <path d="M16 30 H50 L60 10 L75 50 L90 10 L105 50 L120 30 H165"
+            stroke="white" stroke-width="4"/>
+      <circle cx="170" cy="30" r="6" stroke="white" stroke-width="4"/>
+    </symbol>
+
+    <symbol id="op-amp" viewBox="-70 0 280 140">
+      <path d="M0 0 L0 130 L150 65 Z" stroke="white" stroke-width="4"/>
+      <line x1="-60" y1="35" x2="0" y2="35" stroke="white" stroke-width="4"/>
+      <line x1="-60" y1="95" x2="0" y2="95" stroke="white" stroke-width="4"/>
+      <line x1="150" y1="65" x2="200" y2="65" stroke="white" stroke-width="4"/>
+      <circle cx="-60" cy="35" r="7" stroke="white" stroke-width="4"/>
+      <circle cx="-60" cy="95" r="7" stroke="white" stroke-width="4"/>
+      <circle cx="200" cy="65" r="7" stroke="white" stroke-width="4"/>
+      <text x="35" y="50" fill="hsl(225, 86%, 70%)" font-size="34">+</text>
+      <text x="38" y="102" fill="hsl(225, 86%, 70%)" font-size="34">−</text>
+    </symbol>
+
+    <symbol id="capacitor" viewBox="0 0 120 120">
+      <line x1="40" y1="0" x2="40" y2="110" stroke="white" stroke-width="4"/>
+      <line x1="75" y1="0" x2="75" y2="110" stroke="white" stroke-width="4"/>
+      <line x1="15" y1="55" x2="40" y2="55" stroke="hsl(225, 86%, 70%)" stroke-width="4"/>
+      <line x1="75" y1="55" x2="100" y2="55" stroke="hsl(225, 86%, 70%)" stroke-width="4"/>
+    </symbol>
+
+    <symbol id="inductor" viewBox="0 0 220 70">
+      <line x1="0" y1="30" x2="45" y2="30" stroke="white" stroke-width="4"/>
+      <path d="M45 30 C45 0, 75 0, 75 30
+               C75 0, 105 0, 105 30
+               C105 0, 135 0, 135 30
+               C135 0, 165 0, 165 30"
+            stroke="hsl(225, 86%, 70%)" stroke-width="4"/>
+      <line x1="165" y1="30" x2="210" y2="30" stroke="white" stroke-width="4"/>
+      <circle cx="0" cy="30" r="7" stroke="white" stroke-width="4"/>
+      <circle cx="210" cy="30" r="7" stroke="white" stroke-width="4"/>
+    </symbol>
+
+    <!-- PCB Trace / Wires -->
+    <symbol id="wire-trace" viewBox="0 0 260 160">
+      <path d="M20 130 H80 V80 H140 V35 H220"
+            class="outline-small blue"/>
+      <path d="M40 30 H105 V115 H180"
+            class="outline-small"/>
+
+      <circle cx="20" cy="130" r="7" class="dot-white"/>
+      <circle cx="220" cy="35" r="7" class="dot-blue"/>
+      <circle cx="40" cy="30" r="7" class="dot-white"/>
+      <circle cx="180" cy="115" r="7" class="dot-blue"/>
+
+      <circle cx="80" cy="80" r="5" class="dot-blue"/>
+      <circle cx="140" cy="35" r="5" class="dot-white"/>
+    </symbol>
+
+    <!-- Integrated Circuit / DIP Chip -->
+    <symbol id="ic-chip" viewBox="0 0 220 110">
+      <rect x="45" y="15" width="130" height="80" rx="10" class="outline"/>
+      <circle cx="65" cy="35" r="5" class="dot-blue"/>
+
+      <g class="outline-small">
+        <line x1="20" y1="30" x2="45" y2="30"/>
+        <line x1="20" y1="50" x2="45" y2="50"/>
+        <line x1="20" y1="70" x2="45" y2="70"/>
+
+        <line x1="175" y1="30" x2="200" y2="30"/>
+        <line x1="175" y1="50" x2="200" y2="50"/>
+        <line x1="175" y1="70" x2="200" y2="70"/>
+      </g>
+
+      <path d="M85 55 H135" class="outline-small blue"/>
+    </symbol>
+
+    <symbol id="dot-grid" viewBox="0 0 100 70">
+      <g fill="white" opacity="0.9">
+        <circle cx="10" cy="10" r="5"/>
+        <circle cx="35" cy="10" r="5"/>
+        <circle cx="60" cy="10" r="5"/>
+        <circle cx="10" cy="35" r="5"/>
+        <circle cx="35" cy="35" r="5"/>
+        <circle cx="60" cy="35" r="5"/>
+      </g>
+      <g fill="hsl(225, 86%, 70%)">
+        <circle cx="85" cy="10" r="5"/>
+        <circle cx="85" cy="35" r="5"/>
+      </g>
+    </symbol>
+
+    <symbol id="red-plus" viewBox="0 0 40 40">
+      <text x="5" y="30" fill="hsl(10, 86%, 50%)" font-size="34">+</text>
+    </symbol>
+  </defs>
+
+  <!-- placements -->
+  <use href="#oscilloscope" x="360" y="20" width="230" height="150"/>
+  <use href="#signal-generator" x="260" y="210" width="260" height="120"/>
+  <use href="#resistor" x="90" y="95" width="180" height="60"/>
+  <use href="#op-amp" x="170" y="380" width="280" height="140"/>
+  <use href="#capacitor" x="560" y="230" width="120" height="120"/>
+  <use href="#inductor" x="430" y="610" width="220" height="70"/>
+  <use href="#resistor" x="90" y="600" width="180" height="60"/>
+
+  <!-- CPU placements-->
+  <use href="#cpu" x="110" y="-90" width="150" height="150"/>
+
+  <use href="#wire-trace" x="500" y="750" width="260" height="160"/>
+
+  <!-- Dot placements-->
+  <use href="#dot-grid" x="600" y="675" width="100" height="70"/>
+  <use href="#dot-grid" x="120" y="200" width="100" height="70"/>
+  <use href="#dot-grid" x="600" y="155" width="100" height="70"/>
+
+</svg>

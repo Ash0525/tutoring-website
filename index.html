@@ -5,28 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student's POV</title>
     <link rel="stylesheet" href="main_page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <img class="logo" src="./images/blocky-no-bckgrd.png">
-        <h1>Student's POV: Engineering, Math, & Physics</h1>
-        <p>Step-by-step tutorials in differential equations, mechanics, and electromagnetism.
-            Built specifically to help suffering fellow engineers.
-        </p>
-    </header>
-    <section class="subjects">
-        <div class="middle-rectangle">
-            <a class="card" href="./Webpages/about.html" target="_blank" rel="noopener noreferrer">About Page</a>
-            <a class="card" href="./Webpages/diff_eq.html" target="_blank" rel="noopener noreferrer">Differential Equations</a>
-            <a class="card" href="./Webpages/phys_e&m.html" target="_blank" rel="noopener noreferrer">Electricity and Magnitism</a>
-            <a class="card" href="./Webpages/phys_mech.html" target="_blank" rel="noopener noreferrer">Mechanics</a>
-            <a class="card" href="./Webpages/gen_chem.html" target="_blank" rel="noopener noreferrer">General Chemistry I</a>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="./index.html" id="navbar-logo"><i class="fa-solid fa-microchip"></i>STUDENT'S POV</a>
+            <div class="navbar-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar-menu">
+                <li class="navbar-item">
+                    <a href="./index.html" class="navbar-links">Home</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="./Webpages/about.html" class="navbar-links">About</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#lessons" class="navbar-links">Lessons</a>
+                </li>
+                <li class="navbar-btn">
+                    <a href="#lessons" class="button">Start Learning</a>
+                </li>
+            </ul>
         </div>
-    </section>
-    <div id="footer-wrap">
+    </nav>
 
-    </div>
+    <main>
+        <section class="main">
+            <div class="main-container">
+                <div class="main-content">
+                    <h1>ENGINEERING</h1>
+                    <h2>TUTORIALS</h2>
+                    <p>Step-by-step lessons for math, physics, chemistry, and engineering students.</p>
+                    <button class="main-btn"><a href="#lessons">Start Learning</a></button>
+                </div>
+                <div class="main-img-container">
+                    <img src="images/components1.svg" alt="Electronic components illustration" id="main-img">
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="lessons">
+            <h1>Choose a Lesson</h1>
+            <div class="services-container">
+                <a class="services-card" href="./Webpages/diff_eq.html">
+                    <h2>Differential Equations</h2>
+                    <p>Laplace transforms, systems, and step-by-step problem solving.</p>
+                    <span class="lesson-button">Open Lesson</span>
+                </a>
+                <a class="services-card" href="./Webpages/phys_mech.html">
+                    <h2>Mechanics</h2>
+                    <p>Forces, motion, energy, and engineering physics fundamentals.</p>
+                    <span class="lesson-button">Open Lesson</span>
+                </a>
+                <a class="services-card" href="./Webpages/phys_e&m.html">
+                    <h2>Electricity and Magnetism</h2>
+                    <p>Fields, circuits, potential, and electromagnetic concepts.</p>
+                    <span class="lesson-button">Open Lesson</span>
+                </a>
+                <a class="services-card" href="./Webpages/gen_chem.html">
+                    <h2>General Chemistry I</h2>
+                    <p>Core chemistry topics explained from a student's point of view.</p>
+                    <span class="lesson-button">Open Lesson</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-container">
+        <div class="footer-links">
+            <div class="footer-link-wrapper">
+                <div class="footer-link-items">
+                    <h2>Lessons</h2>
+                    <a href="./Webpages/diff_eq.html">Differential Equations</a>
+                    <a href="./Webpages/phys_mech.html">Mechanics</a>
+                    <a href="./Webpages/phys_e&m.html">Electricity and Magnetism</a>
+                    <a href="./Webpages/gen_chem.html">General Chemistry I</a>
+                </div>
+                <div class="footer-link-items">
+                    <h2>Site</h2>
+                    <a href="./index.html">Home</a>
+                    <a href="./Webpages/about.html">About</a>
+                    <a href="#lessons">Start Learning</a>
+                </div>
+            </div>
+        </div>
+        <div class="social-media">
+            <div class="social-media-wrap">
+                <div class="footer-logo">
+                    <a href="./index.html" id="footer-logo"><i class="fa-solid fa-microchip"></i>STUDENT'S POV</a>
+                </div>
+                <p class="website-right">&copy; STUDENT'S POV 2026. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="./index.html" class="social-icon-link" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="./index.html" class="social-icon-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="./index.html" class="social-icon-link" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="./index.html" class="social-icon-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>
-
-<!-- We are going to build the skeleton of my tutorial webpage-->
