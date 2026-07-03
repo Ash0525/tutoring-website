@@ -159,24 +159,89 @@
     color: hsla(0, 0%, 100%, 1);
 }
 
+/* Header text for the featured work section */
+.portfolio-section-header {
+    max-width: 760px;
+    margin-bottom: 48px;
+}
+
+.portfolio-section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+.portfolio-section-header p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: hsla(0, 0%, 90%, 1);
+}
 /* Grid that will hold portfolio project cards */
 .portfolio-grid {
-    background: hsla(0, 0%, 0%, 0);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
 }
 
 /* Individual project card */
 .project-card {
-    background: hsla(0, 0%, 0%, 0);
+    min-height: 260px;
+    padding: 28px;
+    background: hsla(0, 0%, 100%, 0.06);
+    border: 1px solid hsla(0, 0%, 100%, 0.15);
+    border-radius: 8px;
+    transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    background: hsla(0, 0%, 100%, 0.10);
+    border-color: hsla(225, 85%, 70%, 0.55);
+}
+
+/* Top row inside each project card */
+.project-card-top {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 32px;
 }
 
 /* Small badge for project status, category, or progress */
 .status-badge {
-    background: hsla(0, 0%, 0%, 0);
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.wip-badge {
+    background: hsla(45, 100%, 60%, 0.15);
+    color: hsla(45, 100%, 70%, 1);
+    border: 1px solid hsla(45, 100%, 70%, 0.35);
+}
+
+/* Project card title */
+.project-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+    color: hsla(0, 0%, 100%, 1);
+}
+
+/* Project card description */
+.project-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: hsla(0, 0%, 85%, 1);
 }
 
 /* Resume or experience panel */
 .resume-panel {
     background: hsla(0, 0%, 0%, 0);
+}
+
+/* Adds a subtle accent line to work-in-progress cards */
+.wip-card {
+    border-top: 3px solid hsla(45, 100%, 70%, 0.65);
 }
 
 /* Stacks the hero content on smaller screens */
@@ -195,5 +260,9 @@
 
     .portfolio-hero h2 {
         font-size: 2.4rem;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
     }
 }
