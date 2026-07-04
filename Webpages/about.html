@@ -4,13 +4,130 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Page</title>
-    <link rel="stylesheet" href="webpages.css">
+    <link rel="stylesheet" href="../main_page.css">
+    <link rel="stylesheet" href="about.css">
 </head>
 <body>
-    <div class="header-container">
-        <h1 class="header">About Me</h1>
-        <p class="explanation-p"> Hello, welcome to my tutoring website! </p>
-    </div>
-    
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" id="navbar-logo">
+                <img src="../images/blocky-no-bckgrd.png" alt="Student's POV logo" class="navbar-logo-img">
+                STUDENT'S POV
+            </a>
+            <div class="navbar-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar-menu">
+                <li class="navbar-item">
+                    <a href="../index.html" class="navbar-links">Home</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="portfolio.html" class="navbar-links">Portfolio</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="about.html" class="navbar-links">About</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="../index.html#lessons" class="navbar-links">Lessons</a>
+                </li>
+                <li class="navbar-btn">
+                    <a href="../index.html#lessons" class="button">Start Learning</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="about-hero">
+            <div class="about-hero-content">
+                <p class="about-label">About Student's POV</p>
+                <h1>Engineering help from a student's point of view</h1>
+                <p>
+                    Hi, everyone! My name is Alex, and I am a rising junior studying electrical
+                    engineering at Southern Methodist University. I made this website to share
+                    helpful resources with STEM students who are working through tough classes,
+                    confusing problems, and topics that do not always click the first time.
+                    Sometimes a lecture or textbook explanation can feel too advanced too quickly,
+                    so Student's POV is meant to slow things down and explain ideas from the
+                    perspective of someone who has had to struggle through the material too.
+                </p>
+                <div class="about-hero-actions">
+                    <a href="../index.html#lessons" class="about-primary-button">Explore Lessons</a>
+                    <a href="portfolio.html" class="about-secondary-button">View Portfolio</a>
+                </div>
+            </div>
+
+            <div class="about-hero-panel">
+                <h2>What this site is about</h2>
+                <p>
+                    Student's POV combines tutoring, engineering projects, and
+                    documentation so learners can see both the polished answer and
+                    the thinking process that gets there.
+                </p>
+            </div>
+        </section>
+
+        <section class="about-story">
+            <div class="about-story-card about-story-right reveal-card">
+                <p class="about-label">Why I Started</p>
+                <h2>Learning feels different when the steps are not skipped</h2>
+                <p>
+                    I started Student's POV because I know what it feels like to sit
+                    with a difficult math or engineering concept and feel
+                    like every explanation skips the part where it actually starts to
+                    make sense. This site is my way of building the kind of resource I
+                    wish I had: clear, step-by-step lessons from someone still close
+                    enough to the learning process to remember where students get stuck.
+                </p>
+            </div>
+
+            <div class="about-story-card about-story-left reveal-card">
+                <p class="about-label">My Mission</p>
+                <h2>Make technical subjects feel less intimidating</h2>
+                <p>
+                    My mission is to make technical subjects feel less intimidating by
+                    explaining not only the answer, but the reasoning behind it. I want
+                    students to see the steps, the patterns, the mistakes, and the
+                    intuition that turn a confusing problem into something they can
+                    actually work through.
+                </p>
+            </div>
+
+            <div class="about-story-card about-story-right reveal-card">
+                <p class="about-label">My Background</p>
+                <h2>Engineering student, builder, and note keeper</h2>
+                <p>
+                    I am an electrical engineering student at Southern Methodist
+                    University, building projects, tutorials, and study tools while
+                    developing my skills in circuits, programming, physics, and problem
+                    solving. Student's POV is both a tutoring resource and a personal
+                    archive, a place where I can document how to work through core
+                    problems so I do not forget the methods, patterns, and intuition
+                    behind them.
+                </p>
+            </div>
+
+            <div class="about-connect reveal-card">
+                <p class="about-label">Connect</p>
+                <h2>Find the work as it grows</h2>
+                <p>
+                    Follow along as I build out lessons, projects, documentation,
+                    and engineering notes.
+                </p>
+
+                <div class="social-links">
+                    <a href="#" class="social-link">YouTube</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                    <a href="#" class="social-link">GitHub</a>
+                    <a href="#" class="social-link">Email</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../index.js"></script>
+    <script src="about.js"></script>
 </body>
 </html>

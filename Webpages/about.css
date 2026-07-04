@@ -1,0 +1,211 @@
+/* About page hero section */
+.about-hero {
+    min-height: calc(100vh - 80px);
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+    gap: 48px;
+    padding: 80px 10%;
+    background:
+        radial-gradient(900px 650px at 0% 45%, hsla(225, 85%, 70%, 0.20), hsla(225, 86%, 10%, 0) 70%),
+        radial-gradient(850px 620px at 100% 35%, hsla(250, 100%, 74%, 0.16), hsla(225, 86%, 10%, 0) 68%),
+        linear-gradient(180deg, hsla(225, 86%, 10%, 1) 0%, hsla(225, 86%, 9%, 1) 55%, hsla(225, 86%, 7%, 1) 100%);
+    color: hsla(0, 0%, 100%, 1);
+}
+
+/* Left-side hero text */
+.about-hero-content {
+    max-width: 760px;
+}
+
+.about-label {
+    margin-bottom: 16px;
+    color: hsla(5, 90%, 70%, 1);
+    font-weight: 700;
+}
+
+.about-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 24px;
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    color: hsla(0, 0%, 90%, 1);
+}
+
+/* About hero buttons */
+.about-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.about-primary-button,
+.about-secondary-button {
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: 4px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.about-primary-button {
+    background: hsla(5, 90%, 70%, 0.35);
+    color: hsla(0, 0%, 100%, 1);
+}
+
+.about-primary-button:hover {
+    background: hsla(5, 90%, 70%, 1);
+}
+
+.about-secondary-button {
+    color: hsla(0, 0%, 100%, 1);
+    border: 1px solid hsla(5, 90%, 70%, 1);
+}
+
+.about-secondary-button:hover {
+    background: hsla(5, 90%, 70%, 0.18);
+}
+
+/* Right-side summary panel */
+.about-hero-panel {
+    padding: 32px;
+    background: hsla(0, 0%, 100%, 0.06);
+    border: 1px solid hsla(0, 0%, 100%, 0.14);
+    border-radius: 8px;
+}
+
+.about-hero-panel h2 {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+}
+
+.about-hero-panel p {
+    margin-bottom: 0;
+}
+
+/* Scrollable story section below the hero */
+.about-story {
+    padding: 80px 10%;
+    background:
+        radial-gradient(900px 500px at 50% 0%, hsla(0, 0%, 100%, 0.08), hsla(0, 0%, 0%, 0) 65%),
+        linear-gradient(180deg, hsla(0, 0%, 10%, 1) 0%, hsla(0, 0%, 6%, 1) 100%);
+    color: hsla(0, 0%, 100%, 1);
+}
+
+/* Individual About page content panels */
+.about-story-card {
+    max-width: 760px;
+    padding: 32px;
+    margin-bottom: 48px;
+    background: hsla(0, 0%, 100%, 0.06);
+    border: 1px solid hsla(0, 0%, 100%, 0.14);
+    border-radius: 8px;
+}
+
+.about-story-card h2 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+.about-story-card p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: hsla(0, 0%, 88%, 1);
+}
+
+/* Alternates story cards from left to right */
+.about-story-left {
+    margin-right: auto;
+}
+
+.about-story-right {
+    margin-left: auto;
+}
+
+/* Hidden state before a card scrolls into view */
+.reveal-card {
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+    transition: opacity 0.7s ease, transform 0.7s ease, border-color 0.7s ease;
+}
+
+/* Visible state added by about.js */
+.reveal-card.reveal-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    border-color: hsla(225, 85%, 70%, 0.45);
+}
+
+/* Social/contact section at the bottom of the About page */
+.about-connect {
+    max-width: 760px;
+    padding: 32px;
+    margin: 80px auto 0;
+    text-align: center;
+    background: hsla(0, 0%, 100%, 0.06);
+    border: 1px solid hsla(0, 0%, 100%, 0.14);
+    border-radius: 8px;
+}
+
+.about-connect h2 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+.about-connect p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: hsla(0, 0%, 88%, 1);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.social-link {
+    display: inline-block;
+    padding: 12px 22px;
+    color: hsla(0, 0%, 100%, 1);
+    text-decoration: none;
+    border: 1px solid hsla(5, 90%, 70%, 1);
+    border-radius: 4px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: hsla(5, 90%, 70%, 0.18);
+}
+
+/* Stacks the About hero on smaller screens */
+@media screen and (max-width: 900px) {
+    .about-hero {
+        grid-template-columns: 1fr;
+        padding: 64px 6%;
+    }
+
+    .about-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-story {
+        padding: 64px 6%;
+    }
+
+    .about-story-card {
+        max-width: 100%;
+    }
+
+    .about-connect {
+        max-width: 100%;
+    }
+}

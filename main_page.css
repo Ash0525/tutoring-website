@@ -522,7 +522,7 @@ html, body {
     height: 525px;
     width: 400px;
     border-radius: 4px;
-    background-image:linear-gradient(to bottom, hsla(0, 0%, 20%, 0.7), hsla(0, 0%, 10%, 0.0)), url("./images/pcb1.jpg");
+    background-image:linear-gradient(to bottom, hsla(0, 0%, 20%, 0.7), hsla(0, 0%, 10%, 0.0)), url("./images/circuit-lesson-card.svg");
     background-size: cover;
     background-position: center;
     position: relative;
@@ -553,6 +553,36 @@ html, body {
     background-image:linear-gradient(to bottom, hsla(0, 0%, 20%, 0.7), hsla(0, 0%, 10%, 0.0)), url("./images/books.svg");
     background-size: cover;
     background-position: center;
+}
+
+#projects .services-card:nth-child(1) {
+    background-image: linear-gradient(to bottom, hsla(225, 86%, 10%, 0.78), hsla(0, 0%, 10%, 0.20)), url("./images/port1.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#projects .services-card:nth-child(2) {
+    background-image: linear-gradient(to bottom, hsla(225, 86%, 10%, 0.78), hsla(0, 0%, 10%, 0.20)), url("./images/port2.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.project-preview-card {
+    border: 1px solid hsla(0, 0%, 100%, 0.14);
+}
+
+.project-status-badge {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    display: inline-block;
+    padding: 6px 12px;
+    border: 1px solid hsla(45, 100%, 70%, 0.35);
+    border-radius: 999px;
+    background: hsla(45, 100%, 60%, 0.15);
+    color: hsla(45, 100%, 70%, 1);
+    font-size: 0.8rem;
+    font-weight: 700;
 }
 
 .services h2 {

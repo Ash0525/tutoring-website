@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" fill="none">
+  <style>
+    .bg {
+      fill: hsl(225, 86%, 10%);
+    }
+
+    .wire {
+      stroke: white;
+      stroke-width: 7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      filter: drop-shadow(0 0 8px hsl(225, 86%, 70%));
+    }
+
+    .blue {
+      stroke: hsl(225, 86%, 70%);
+      filter: drop-shadow(0 0 10px hsl(225, 86%, 70%));
+    }
+
+    .green {
+      stroke: hsl(140, 100%, 65%);
+      filter: drop-shadow(0 0 8px hsl(140, 100%, 65%));
+    }
+
+    .accent {
+      stroke: hsl(5, 90%, 70%);
+      filter: drop-shadow(0 0 8px hsl(5, 90%, 70%));
+    }
+
+    .label {
+      fill: hsl(225, 86%, 70%);
+      font-family: Arial, sans-serif;
+      font-size: 42px;
+      font-weight: 700;
+    }
+
+    .small-label {
+      fill: white;
+      font-family: Arial, sans-serif;
+      font-size: 34px;
+      font-weight: 700;
+    }
+  </style>
+
+  <rect class="bg" width="900" height="520"/>
+
+  <radialGradient id="leftGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(120 130) rotate(35) scale(520 360)">
+    <stop stop-color="hsl(225, 86%, 70%)" stop-opacity="0.24"/>
+    <stop offset="1" stop-color="hsl(225, 86%, 10%)" stop-opacity="0"/>
+  </radialGradient>
+  <rect width="900" height="520" fill="url(#leftGlow)"/>
+
+  <!-- Main circuit wires -->
+  <path class="wire" d="M80 120 V415 H810 V120 H610"/>
+  <path class="wire" d="M610 120 H465"/>
+  <path class="wire" d="M310 120 H220"/>
+  <path class="wire" d="M610 120 V415"/>
+  <path class="wire" d="M280 195 V415"/>
+
+  <!-- Left capacitor -->
+  <line class="green" x1="40" y1="235" x2="120" y2="235" stroke-width="7" stroke-linecap="round"/>
+  <line class="green" x1="40" y1="260" x2="120" y2="260" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- Middle capacitor to ground -->
+  <line class="green" x1="240" y1="260" x2="320" y2="260" stroke-width="7" stroke-linecap="round"/>
+  <line class="green" x1="240" y1="285" x2="320" y2="285" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- Top switch -->
+  <circle cx="220" cy="120" r="14" fill="hsl(225, 86%, 70%)"/>
+  <circle cx="280" cy="195" r="14" fill="hsl(225, 86%, 70%)"/>
+  <line class="wire" x1="220" y1="150" x2="290" y2="120"/>
+  <path class="blue" d="M190 170 C195 215, 225 238, 250 248" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path class="blue" d="M250 248 L230 252 L244 232" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Resistor -->
+  <path class="accent" d="M310 120 H340 L355 85 L380 155 L405 85 L430 155 L445 120 H465" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Inductor -->
+  <path class="blue" d="M610 220
+                         C650 220, 650 255, 610 255
+                         C570 255, 570 290, 610 290
+                         C650 290, 650 325, 610 325
+                         C570 325, 570 360, 610 360"
+        stroke-width="7" fill="none" stroke-linecap="round"/>
+
+  <!-- Right capacitor -->
+  <line class="green" x1="770" y1="215" x2="850" y2="215" stroke-width="7" stroke-linecap="round"/>
+  <line class="green" x1="770" y1="240" x2="850" y2="240" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- Voltage source -->
+  <circle cx="810" cy="325" r="42" stroke="white" stroke-width="7" filter="drop-shadow(0 0 8px hsl(225, 86%, 70%))"/>
+  <line x1="790" y1="310" x2="830" y2="310" stroke="white" stroke-width="6" stroke-linecap="round"/>
+  <line x1="810" y1="290" x2="810" y2="330" stroke="white" stroke-width="6" stroke-linecap="round"/>
+  <line x1="792" y1="342" x2="828" y2="342" stroke="white" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Node dots and labels -->
+  <circle cx="610" cy="120" r="15" fill="hsl(225, 86%, 70%)"/>
+  <text class="label" x="205" y="75">A</text>
+  <text class="label" x="305" y="205">B</text>
+  <text class="small-label" x="635" y="75">v(t)</text>
+
+  <!-- Decorative dot grid -->
+  <g opacity="0.9">
+    <circle cx="165" cy="345" r="6" fill="white"/>
+    <circle cx="190" cy="345" r="6" fill="white"/>
+    <circle cx="215" cy="345" r="6" fill="white"/>
+    <circle cx="240" cy="345" r="6" fill="hsl(225, 86%, 70%)"/>
+    <circle cx="165" cy="370" r="6" fill="white"/>
+    <circle cx="190" cy="370" r="6" fill="white"/>
+    <circle cx="215" cy="370" r="6" fill="white"/>
+    <circle cx="240" cy="370" r="6" fill="hsl(225, 86%, 70%)"/>
+  </g>
+</svg>

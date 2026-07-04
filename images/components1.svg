@@ -169,25 +169,108 @@
     <symbol id="red-plus" viewBox="0 0 40 40">
       <text x="5" y="30" fill="hsl(10, 86%, 50%)" font-size="34">+</text>
     </symbol>
+
+    <symbol id="em-wave" viewBox="0 0 260 150">
+      <path d="M15 75 C35 30, 55 30, 75 75 S115 120, 135 75 S175 30, 195 75 S235 120, 250 75"
+            stroke="hsl(225, 86%, 70%)" stroke-width="4" fill="none"/>
+      <path d="M15 75 C35 120, 55 120, 75 75 S115 30, 135 75 S175 120, 195 75 S235 30, 250 75"
+            stroke="white" stroke-width="4" fill="none"/>
+      <text x="35" y="28" fill="hsl(225, 86%, 70%)" font-size="24">E</text>
+      <text x="205" y="132" fill="white" font-size="24">B</text>
+    </symbol>
+
+    <symbol id="atom" viewBox="0 0 130 130">
+      <circle cx="65" cy="65" r="7" fill="hsl(225, 86%, 70%)"/>
+      <ellipse cx="65" cy="65" rx="55" ry="18" class="outline-small"/>
+      <ellipse cx="65" cy="65" rx="55" ry="18" class="outline-small" transform="rotate(60 65 65)"/>
+      <ellipse cx="65" cy="65" rx="55" ry="18" class="outline-small" transform="rotate(120 65 65)"/>
+      <circle cx="119" cy="65" r="5" class="dot-white"/>
+      <circle cx="38" cy="18" r="5" class="dot-blue"/>
+      <circle cx="38" cy="112" r="5" class="dot-white"/>
+    </symbol>
+
+    <symbol id="dot-cluster-4x6" viewBox="0 0 150 105">
+      <g fill="white" opacity="0.9">
+        <circle cx="15" cy="15" r="5"/>
+        <circle cx="40" cy="15" r="5"/>
+        <circle cx="65" cy="15" r="5"/>
+        <circle cx="90" cy="15" r="5"/>
+        <circle cx="115" cy="15" r="5"/>
+        <circle cx="15" cy="40" r="5"/>
+        <circle cx="40" cy="40" r="5"/>
+        <circle cx="65" cy="40" r="5"/>
+        <circle cx="90" cy="40" r="5"/>
+        <circle cx="115" cy="40" r="5"/>
+        <circle cx="15" cy="65" r="5"/>
+        <circle cx="40" cy="65" r="5"/>
+        <circle cx="65" cy="65" r="5"/>
+        <circle cx="90" cy="65" r="5"/>
+        <circle cx="115" cy="65" r="5"/>
+        <circle cx="15" cy="90" r="5"/>
+        <circle cx="40" cy="90" r="5"/>
+        <circle cx="65" cy="90" r="5"/>
+        <circle cx="90" cy="90" r="5"/>
+        <circle cx="115" cy="90" r="5"/>
+      </g>
+      <g fill="hsl(225, 86%, 70%)">
+        <circle cx="140" cy="15" r="5"/>
+        <circle cx="140" cy="40" r="5"/>
+        <circle cx="140" cy="65" r="5"/>
+        <circle cx="140" cy="90" r="5"/>
+      </g>
+    </symbol>
+
+    <symbol id="dot-triangle-right" viewBox="0 0 130 130">
+      <g fill="white" opacity="0.9">
+        <circle cx="15" cy="115" r="5"/>
+        <circle cx="40" cy="115" r="5"/>
+        <circle cx="65" cy="115" r="5"/>
+        <circle cx="90" cy="115" r="5"/>
+        <circle cx="15" cy="90" r="5"/>
+        <circle cx="40" cy="90" r="5"/>
+        <circle cx="65" cy="90" r="5"/>
+        <circle cx="15" cy="65" r="5"/>
+        <circle cx="40" cy="65" r="5"/>
+        <circle cx="15" cy="40" r="5"/>
+      </g>
+      <g fill="hsl(225, 86%, 70%)">
+        <circle cx="115" cy="115" r="5"/>
+        <circle cx="90" cy="90" r="5"/>
+        <circle cx="65" cy="65" r="5"/>
+      </g>
+    </symbol>
   </defs>
 
   <!-- placements -->
   <use href="#oscilloscope" x="360" y="20" width="230" height="150"/>
   <use href="#signal-generator" x="260" y="210" width="260" height="120"/>
+  <use href="#signal-generator" x="230" y="670" width="260" height="120"/>
   <use href="#resistor" x="90" y="95" width="180" height="60"/>
-  <use href="#op-amp" x="170" y="380" width="280" height="140"/>
+  <use href="#op-amp" x="120" y="380" width="280" height="140"/>
   <use href="#capacitor" x="560" y="230" width="120" height="120"/>
-  <use href="#inductor" x="430" y="610" width="220" height="70"/>
-  <use href="#resistor" x="90" y="600" width="180" height="60"/>
+  <use href="#inductor" x="430" y="500" width="220" height="70"/>
+  <use href="#resistor" x="50" y="600" width="180" height="60"/>
 
   <!-- CPU placements-->
-  <use href="#cpu" x="110" y="-90" width="150" height="150"/>
+  <use href="#cpu" x="110" y="-70" width="150" height="150"/>
 
-  <use href="#wire-trace" x="500" y="750" width="260" height="160"/>
+  <use href="#wire-trace" x="500" y="700" width="260" height="160"/>
+  <use href="#wire-trace" x="0" y="-200" width="260" height="160"/>
 
   <!-- Dot placements-->
-  <use href="#dot-grid" x="600" y="675" width="100" height="70"/>
+  <use href="#dot-grid" x="650" y="675" width="100" height="70"/>
   <use href="#dot-grid" x="120" y="200" width="100" height="70"/>
+  <use href="#dot-grid" x="250" y="550" width="100" height="70"/>
   <use href="#dot-grid" x="600" y="155" width="100" height="70"/>
+
+  <!-- Electromagnetism and atom placements -->
+  <use href="#em-wave" x="430" y="330" width="220" height="125"/>
+  <use href="#em-wave" x="250" y="-125" width="220" height="125"/>
+  <use href="#atom" x="600" y="-100" width="70" height="70"/>
+  <use href="#atom" x="200" y="310" width="65" height="65"/>
+
+  <!-- Larger dot cluster placements -->
+  <use href="#dot-cluster-4x6" x="560" y="575" width="125" height="88"/>
+  <use href="#dot-triangle-right" x="20" y="720" width="105" height="105"/>
 
 </svg>
