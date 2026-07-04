@@ -124,12 +124,58 @@
     z-index: 1;
 }
 
-.portfolio-feature-panel img {
+/* Holds all images for the portfolio hero slider */
+.slides {
+    position: relative;
+    height: 100%;
+    aspect-ratio: 4 / 5;
+    z-index: 0;
+}
+
+/* Stacks each slide so opacity can fade between images */
+.portfolio-feature-panel .slide {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
-    display: block;
     object-fit: cover;
     object-position: center;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+/* Shows the current active slide */
+.portfolio-feature-panel .slide.displaySlide {
+    opacity: 1;
+}
+
+/* Previous and next buttons for the image slider */
+.prevBtn,
+.nextBtn {
+    position: absolute;
+    top: 50%;
+    z-index: 3;
+    transform: translateY(-50%);
+    padding: 12px 16px;
+    border: none;
+    border-radius: 4px;
+    background: hsla(225, 86%, 10%, 0.72);
+    color: hsla(0, 0%, 100%, 1);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.prevBtn {
+    left: 16px;
+}
+
+.nextBtn {
+    right: 16px;
+}
+
+.prevBtn:hover,
+.nextBtn:hover {
+    background: hsla(225, 85%, 70%, 0.72);
 }
 
 /* Caption overlay for the full-height hero image */

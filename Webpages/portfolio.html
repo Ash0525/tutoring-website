@@ -51,7 +51,7 @@
                 </p>
 
                 <div class="portfolio-hero-actions">
-                    <a href="#" class="portfolio-hero-button">
+                    <a href="../documents/Portfolio Resume Alexander Tiu.pdf" class="portfolio-hero-button">
                         <span>View Resume</span>
                     </a>
                     <a href="#portfolio-projects" class="portfolio-secondary-button">
@@ -61,7 +61,14 @@
             </div>
 
             <aside class="portfolio-feature-panel">
-                <img src="../images/oscilloscope-blocky.png" alt="Oscilloscope project preview">
+                <div class="slides">
+                    <img src="../images/port1.png" alt="Portfolio picture number 1" class="slide">
+                    <img src="../images/port2.png" alt="Portfolio picture number 2" class="slide">
+                    <img src="../images/port3.png" alt="Portfolio picture number 3" class="slide">
+                </div>
+                <button class="prevBtn" onclick="prevSlide()">&#10094;</button>
+                <button class="nextBtn" onclick="manualNextSlide()">&#10095;</button>
+
                 <div class="portfolio-feature-caption">
                     <p class="portfolio-label">Featured Preview</p>
                     <h3>Circuit lessons and project walkthroughs</h3>
@@ -110,6 +117,6 @@
         </section>
     </main>
 
-    <script src="../index.js"></script>
+    <script src="portfolio.js"></script>
 </body>
 </html>
