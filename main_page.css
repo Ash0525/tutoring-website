@@ -602,10 +602,9 @@ html, body {
     background-position: center;
 }
 
-#projects .services-card:nth-child(2) {
-    background-image: linear-gradient(to bottom, hsla(225, 86%, 10%, 0.78), hsla(0, 0%, 10%, 0.20)), url("./images/port2.png");
-    background-size: cover;
-    background-position: center;
+#projects .charge-lab-card {
+    overflow: hidden;
+    background: hsla(225, 86%, 8%, 1);
 }
 
 .project-preview-card {

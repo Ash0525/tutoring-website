@@ -298,8 +298,15 @@
     border-top: 3px solid hsla(45, 100%, 70%, 0.65);
 }
 
-.live-card {
+.charge-lab-card {
+    position: relative;
+    overflow: hidden;
     border-top: 3px solid hsla(145, 70%, 60%, 0.65);
+    background: hsla(225, 86%, 8%, 1);
+}
+
+.charge-lab-card:hover {
+    background: hsla(225, 86%, 8%, 1);
 }
 
 /* Stacks the hero content on smaller screens */
