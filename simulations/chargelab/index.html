@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChargeLab Web Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section class="simulation-area">
+            <h1>ChargeLab Web</h1>
+            <canvas id="simCanvas" width="1400" height="700"></canvas>
+
+            <p class="app-description">
+                ChargeLab is an interactive Coulomb-force simulator written in C++ and compiled to WebAssembly.
+                Add, select, drag, edit, and fix charged particles to explore electric forces.
+            </p>
+        </section>
+
+        <aside class="side-panel collapsed" id="sidePanel">
+            <button id="panelToggleButton" type="button" class="panel-toggle"
+                    aria-controls="panelContent" aria-expanded="false">
+                Open Panel
+            </button>
+
+            <div class="panel-content" id="panelContent" hidden>
+                <details class="instructions">
+                    <summary>How to Use</summary>
+
+                    <p>Select a mode, then interact with the canvas.</p>
+
+                    <ul>
+                        <li><strong>Select/Drag:</strong> click and drag particles</li>
+                        <li><strong>Add +:</strong> click canvas to add a positive charge</li>
+                        <li><strong>Add -:</strong> click canvas to add a negative charge</li>
+                        <li><strong>Fix Selected:</strong> keep a selected particle in place</li>
+                        <li><strong>Apply Changes:</strong> update the selected particle's values</li>
+                    </ul>
+                </details>
+
+                <details class="unit-guide">
+                    <summary>Input Units &amp; Ranges</summary>
+                    <ul>
+                        <li>Charge: −100 to 100 µC</li>
+                        <li>Mass: 0.001 to 1 kg</li>
+                        <li>Radius: 0.000001 to 0.0001 m (1–100 µm)</li>
+                        <li>Position X: 0 to 5.6 m</li>
+                        <li>Position Y: 0 to 2.8 m</li>
+                        <li>Velocity: −10 to 10 m/s</li>
+                    </ul>
+                    <p>Physical radii are enlarged on screen so particles remain visible.</p>
+                </details>
+
+                <section class="controls">
+                    <button id="pauseButton" type="button">Pause</button>
+                    <button id="clearButton" type="button">Clear</button>
+                    <button id="resetDemoButton" type="button">Reset Demo</button>
+
+                    <!-- Particle controls -->
+                    <button id="selectedModeButton" type="button">Select/Drag</button>
+                    <button id="positiveModeButton" type="button">Add +</button>
+                    <button id="negativeModeButton" type="button">Add -</button>
+
+                    <!-- Fixed Button -->
+                    <button id="fixedButton" type="button">Fix Selected</button>
+                </section>
+
+                <section class="selected-panel">
+                    <h2>Selected Particle Information</h2>
+
+                    <p id="selectedStatus">No particle selected</p>
+
+                    <p>Charge: <span id="selectedCharge">--</span> µC</p>
+                    <p>Mass: <span id="selectedMass">--</span> kg</p>
+                    <p>Radius: <span id="selectedRadius">--</span> m</p>
+                    <p>Position: <span id="selectedPosition">--</span> m</p>
+                    <p>Velocity: <span id="selectedVelocity">--</span> m/s</p>
+                    <p>Fixed: <span id="selectedFixed">--</span></p>
+
+                    <div class="selected-editor">
+                        <h3>Edit Selected</h3>
+
+                        <label>
+                            Charge (µC)
+                            <input id="chargeInput" type="number" min="-100" max="100" step="0.1"
+                                   title="Enter a charge from -100 to 100 microcoulombs">
+                        </label>
+
+                        <label>
+                            Mass (kg)
+                            <input id="massInput" type="number" min="0.001" max="1" step="0.001"
+                                   title="Enter a mass from 0.001 to 1 kilogram">
+                        </label>
+
+                        <label>
+                            Radius (m)
+                            <input id="radiusInput" type="number" min="0.000001" max="0.0001"
+                                   step="0.000001" title="Enter a physical radius from 0.000001 to 0.0001 meter">
+                        </label>
+
+                        <label>
+                            Velocity X (m/s)
+                            <input id="vxInput" type="number" min="-10" max="10" step="0.1"
+                                   title="Enter an X velocity from -10 to 10 meters per second">
+                        </label>
+
+                        <label>
+                            Velocity Y (m/s)
+                            <input id="vyInput" type="number" min="-10" max="10" step="0.1"
+                                   title="Enter a Y velocity from -10 to 10 meters per second">
+                        </label>
+
+                        <label>
+                            Position X (m)
+                            <input id="xInput" type="number" min="0" max="5.6" step="0.01"
+                                   title="Enter an X position from 0 to 5.6 meters">
+                        </label>
+
+                        <label>
+                            Position Y (m)
+                            <input id="yInput" type="number" min="0" max="2.8" step="0.01"
+                                   title="Enter a Y position from 0 to 2.8 meters">
+                        </label>
+
+                        <button id="applySelectedButton" type="button">Apply Changes</button>
+                    </div>
+                </section>
+            </div>
+        </aside>
+    </main>
+
+    <script src="app.js"></script>
+    <script src="chargeLab.js"></script>
+</body>
+</html>

@@ -45,7 +45,7 @@ Accomplished:
 - Added a featured work section below the hero with a black/gray background.
 - Created the first portfolio project cards:
   - RC Car Version 1
-  - Portfolio Website
+  - Charge Lab
 - Added WIP status badges for active projects.
 - Built the project card grid.
 - Styled project cards with glass-like backgrounds, borders, hover lift, and WIP accent lines.
